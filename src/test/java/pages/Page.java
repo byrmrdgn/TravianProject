@@ -40,5 +40,34 @@ public class Page {
     @FindBy(partialLinkText = "Giriş")
     public WebElement girisLinki;
 
+    @FindBy (xpath = "//h1")
+    public WebElement anaSayfadakiBuyukYazi;
+
+    @FindBy(xpath = "(//h2)[1]")
+    public WebElement anaSayfadakiKucukYazi;
+
+    @FindBy(id = "playNowButton")
+    public WebElement hemenOyna;
+
+    @FindBy(xpath = "//img[@alt='Travian: Legends Kale Arkaplanı']")
+    public WebElement girisSayfasiKaleResmi;
+
+    @FindBy(xpath = "//img[@alt='Travian: Legends Roma Ordusu']")
+    public WebElement girisSayfasiOrduResmi;
+
+    @FindBy(xpath = "//img[@alt='Travian: Legends Roma Komutanı']")
+    public WebElement girisSayfasiKomutanResmi;
+
+    @FindBy(xpath = "(//a[@title='Hemen oyna'])[3]")
+    public WebElement sayfaAltiHemenOyna;
+
+    @FindBy (xpath = "(//a[@target='_blank'])[8]")
+    public WebElement facebookLinki;
+
+    @FindBy (xpath = "(//a[@target='_blank'])[9]")
+    public WebElement sayfaAltiDiscordLinki;
+
+    @FindBy (xpath = "(//a[@target='_blank'])[10]")
+    public WebElement youTubeLinki;
 
 }
