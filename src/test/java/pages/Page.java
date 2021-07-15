@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 import java.security.cert.X509Certificate;
+import java.util.List;
 
 public class Page {
 
@@ -18,6 +19,9 @@ public class Page {
 
     @FindBy(xpath = "(//li [@class='dropdown'])[1]")
     public WebElement oyunDropdown;
+
+    @FindBy(xpath = "(//li [@class='dropdown']/ul/li)")
+    public List <WebElement> oyunDropdownIcerik;
 
     @FindBy(xpath = "(//a[@title='Tournament'])[1]")
     public WebElement tournamentLinki;
