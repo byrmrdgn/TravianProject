@@ -21,13 +21,34 @@ public class Page {
     public WebElement oyunDropdown;
 
     @FindBy(xpath = "(//li [@class='dropdown']/ul/li)")
-    public List <WebElement> oyunDropdownIcerik;
+    public List <WebElement> oyunDropdownListe;
+
+    @FindBy(partialLinkText = "Oyun tarzı")
+    public WebElement oyunDrpdwnOyunTarziLinki;
+
+    @FindBy(partialLinkText = "Oyuncu etkileşimi")
+    public WebElement oyunDrpdwnOyuncuEtkilesimiLinki;
+
+    @FindBy(partialLinkText = "İmparatorluk kur")
+    public WebElement oyunDrpdwnİmparatorlukKurLinki;
+
+    @FindBy(partialLinkText = "Çarpışma")
+    public WebElement oyunDrpdwnÇarpışmaLinki;
+
+    @FindBy(partialLinkText = "Geç oyun")
+    public WebElement oyunDrpdwnGeçOyunLinki;
 
     @FindBy(xpath = "(//a[@title='Tournament'])[1]")
     public WebElement tournamentLinki;
 
     @FindBy(xpath = "(//li [@class='dropdown'])[2]")
     public WebElement medyaDropdown;
+
+    @FindBy(partialLinkText = "Ekran Görüntüleri")
+    public WebElement medyaDrpdwnEkranGörüntüleriLinki;
+
+    @FindBy(partialLinkText = "TV reklamları")
+    public WebElement medyaDrpdwnTVreklamlarıLinki;
 
     @FindBy(xpath = "(//a[@target='_blank'])[1]")
     public WebElement discordLinki;
