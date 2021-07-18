@@ -53,11 +53,14 @@ public class Page {
     @FindBy(xpath = "(//a[@target='_blank'])[1]")
     public WebElement discordLinki;
 
-    @FindBy(xpath = "(//img)[6]")
+    @FindBy(xpath = "(//img)[4]")
     public WebElement travianLogo;
 
-    @FindBy (xpath = "(//span[@class='selectedLanguage language'])[1]")
-    public WebElement dilSecenekleri;
+    @FindBy(xpath = "(//span[@class='selectedLanguage language'])[1]")
+    public WebElement dilSecenekleriLinki;
+
+    @FindBy(xpath = "//div [@class='others']")
+    public List <WebElement> dilSecenekleri;
 
     @FindBy (xpath = "(//a[@target='_blank'])[2]")
     public WebElement haberlerLinki;

@@ -26,3 +26,12 @@ Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
   @discordlinki
   Scenario: TC_005 Kullanici discord linkini kontrol eder
     Given discord linkine tiklar ve geri döner
+
+  @logo
+  Scenario: TC_006 Kullanici logoyu görur
+    Given travian logosunun görunurlugunu test eder
+
+  @dilSecenekleri
+  Scenario: TC_007 Kullanici dil seceneklerinden dil secer
+    Given dil secenekleri linkini tiklar
+    And acilan sayfadan dilleri secer

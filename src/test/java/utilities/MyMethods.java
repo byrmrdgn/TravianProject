@@ -3,14 +3,14 @@ package utilities;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.asserts.SoftAssert;
 import pages.Page;
+
+import java.util.Set;
 
 public class MyMethods {
 
     Actions actions=new Actions(Driver.getDriver());
     Page page=new Page();
-    SoftAssert softAssert=new SoftAssert();
     static String url="";
 
     public void acceptAll(){
@@ -42,11 +42,29 @@ public class MyMethods {
 
     public void urlDogrula(String string){
         Assert.assertEquals(string,url);
-        System.out.println(url);
-        System.out.println(string);
     }
 
     public void elementeGit(WebElement element){
         actions.moveToElement(element).perform();
+    }
+
+    public void windowsHandleAl(){
+
+        Set<String> tumPencereler=Driver.getDriver().getWindowHandles();
+    /*
+        for (String w:tumPencereler){
+            System.out.println(w);
+        }
+    */
+        String ikinciSayfaHandle= (String) (tumPencereler.toArray())[tumPencereler.size()-1];
+        Driver.getDriver().switchTo().window(ikinciSayfaHandle);
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        String url=Driver.getDriver().getCurrentUrl();
+        Assert.assertEquals(ConfigurationReader.getProperty("discord_url"),url);
     }
 }

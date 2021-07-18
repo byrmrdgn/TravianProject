@@ -1,16 +1,14 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
 import pages.Page;
 import utilities.ConfigurationReader;
 import utilities.Driver;
+import utilities.JSExecutor;
 import utilities.MyMethods;
-
-import java.util.Set;
 
 
 public class US_01_SayfaGörunurlugu {
@@ -19,7 +17,6 @@ public class US_01_SayfaGörunurlugu {
 */
     Page page=new Page();
     MyMethods myMethods=new MyMethods();
-    SoftAssert softAssert=new SoftAssert();
     Actions actions =new Actions(Driver.getDriver());
 
 /*
@@ -100,24 +97,28 @@ public class US_01_SayfaGörunurlugu {
     @Given("discord linkine tiklar ve geri döner")
     public void discord_linkine_tiklar_ve_geri_döner() {
        page.discordLinki.click();
+       myMethods.windowsHandleAl();
+     }
 
-        Set<String> tumPencereler=Driver.getDriver().getWindowHandles();
+    @Given("travian logosunun görunurlugunu test eder")
+    public void travian_logosunun_görunurlugunu_test_eder() {
+        Assert.assertTrue(page.travianLogo.isDisplayed());
+    }
 
-        for (String w:tumPencereler){
-            System.out.println(w);
-        }
-        String ikinciSayfaHandle= (String) (tumPencereler.toArray())[tumPencereler.size()-1];
-        Driver.getDriver().switchTo().window(ikinciSayfaHandle);
-
+    @Given("dil secenekleri linkini tiklar")
+    public void dil_secenekleri_linkini_tiklar() {
+        page.dilSecenekleriLinki.click();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        String url=Driver.getDriver().getCurrentUrl();
-        Assert.assertEquals(ConfigurationReader.getProperty("discord_url"),url);
-        System.out.println("String : "+url);
-        System.out.println("config : "+ConfigurationReader.getProperty("discord_url"));
+    }
+    @Given("acilan sayfadan dilleri secer")
+    public void acilan_sayfadan_dilleri_secer() {
+        for (WebElement w : page.dilSecenekleri){
+            System.out.println(w.getText());
+        }
     }
 
 }
