@@ -35,3 +35,15 @@ Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
   Scenario: TC_007 Kullanici dil seceneklerinden dil secer
     Given dil secenekleri linkini tiklar
     And acilan sayfadan dilleri secer
+
+  @haberlerLinki
+  Scenario: TC_008 Kullanici haberler linkini kontrol eder
+    Given haberler linkine tiklar ve geri döner
+
+  @buyukYazi
+  Scenario: TC_009 Kullanici buyuk yazinin varligini kontrol eder
+    Given ana sayfada buyuk yazinin görunup görunmedigine bakar
+
+  @kucukYazi
+  Scenario: TC_010 Kullanici kucuk yazinin varligini kontrol eder
+    Given ana sayfada kucuk yazinin görunup görunmedigine bakar

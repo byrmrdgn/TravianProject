@@ -48,7 +48,7 @@ public class MyMethods {
         actions.moveToElement(element).perform();
     }
 
-    public void windowsHandleAl(){
+    public void windowsHandleAl(String string){
 
         Set<String> tumPencereler=Driver.getDriver().getWindowHandles();
     /*
@@ -65,6 +65,6 @@ public class MyMethods {
             e.printStackTrace();
         }
         String url=Driver.getDriver().getCurrentUrl();
-        Assert.assertEquals(ConfigurationReader.getProperty("discord_url"),url);
+        Assert.assertEquals(string,url);
     }
 }

@@ -7,7 +7,6 @@ import org.openqa.selenium.interactions.Actions;
 import pages.Page;
 import utilities.ConfigurationReader;
 import utilities.Driver;
-import utilities.JSExecutor;
 import utilities.MyMethods;
 
 
@@ -97,7 +96,7 @@ public class US_01_SayfaGörunurlugu {
     @Given("discord linkine tiklar ve geri döner")
     public void discord_linkine_tiklar_ve_geri_döner() {
        page.discordLinki.click();
-       myMethods.windowsHandleAl();
+       myMethods.windowsHandleAl(ConfigurationReader.getProperty("discord_url"));
      }
 
     @Given("travian logosunun görunurlugunu test eder")
@@ -114,11 +113,28 @@ public class US_01_SayfaGörunurlugu {
             e.printStackTrace();
         }
     }
+
     @Given("acilan sayfadan dilleri secer")
     public void acilan_sayfadan_dilleri_secer() {
         for (WebElement w : page.dilSecenekleri){
             System.out.println(w.getText());
         }
+    }
+
+    @Given("haberler linkine tiklar ve geri döner")
+    public void haberler_linkine_tiklar_ve_geri_döner() {
+        page.haberlerLinki.click();
+        myMethods.windowsHandleAl(ConfigurationReader.getProperty("haberler_url"));
+    }
+
+    @Given("ana sayfada buyuk yazinin görunup görunmedigine bakar")
+    public void ana_sayfada_buyuk_yazinin_görunup_görunmedigine_bakar() {
+       Assert.assertTrue(page.anaSayfadakiBuyukYazi.isDisplayed());
+    }
+
+    @Given("ana sayfada kucuk yazinin görunup görunmedigine bakar")
+    public void ana_sayfada_kucuk_yazinin_görunup_görunmedigine_bakar() {
+        Assert.assertTrue(page.anaSayfadakiKucukYazi.isDisplayed());
     }
 
 }
