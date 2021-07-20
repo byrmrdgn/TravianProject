@@ -59,8 +59,11 @@ public class Page {
     @FindBy(xpath = "(//span[@class='selectedLanguage language'])[1]")
     public WebElement dilSecenekleriLinki;
 
-    @FindBy(xpath = "//div [@class='others']")
+    @FindBy(xpath = "//label [@class='radioButton']")
     public List <WebElement> dilSecenekleri;
+
+    @FindBy(xpath = "(//label [@class='radioButton'])[48]")
+    public WebElement turkce;
 
     @FindBy (xpath = "(//a[@target='_blank'])[2]")
     public WebElement haberlerLinki;

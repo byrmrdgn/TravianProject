@@ -18,6 +18,7 @@ public class US_01_SayfaGörunurlugu {
     MyMethods myMethods=new MyMethods();
     Actions actions =new Actions(Driver.getDriver());
 
+
 /*
                         ****************************  KODLAR     ******************
  */
@@ -116,9 +117,7 @@ public class US_01_SayfaGörunurlugu {
 
     @Given("acilan sayfadan dilleri secer")
     public void acilan_sayfadan_dilleri_secer() {
-        for (WebElement w : page.dilSecenekleri){
-            System.out.println(w.getText());
-        }
+        myMethods.dilSec();
     }
 
     @Given("haberler linkine tiklar ve geri döner")
@@ -135,6 +134,26 @@ public class US_01_SayfaGörunurlugu {
     @Given("ana sayfada kucuk yazinin görunup görunmedigine bakar")
     public void ana_sayfada_kucuk_yazinin_görunup_görunmedigine_bakar() {
         Assert.assertTrue(page.anaSayfadakiKucukYazi.isDisplayed());
+    }
+
+    @Given("ana sayfada hemen oyna yazisinin görunup görunmedigine bakar")
+    public void ana_sayfada_hemen_oyna_yazisinin_görunup_görunmedigine_bakar() {
+        Assert.assertTrue(page.hemenOyna.isDisplayed());
+    }
+
+    @Given("ana sayfada kale arka plan resminin görunup görunmedigine bakar")
+    public void ana_sayfada_kale_arka_plan_resminin_görunup_görunmedigine_bakar() {
+        Assert.assertTrue(page.girisSayfasiKaleResmi.isDisplayed());
+    }
+
+    @Given("ana sayfada roma ordusu resminin görunup görunmedigine bakar")
+    public void ana_sayfada_roma_ordusu_resminin_görunup_görunmedigine_bakar() {
+        Assert.assertTrue(page.girisSayfasiOrduResmi.isDisplayed());
+    }
+
+    @Given("ana sayfada roma komutan resminin görunup görunmedigine bakar")
+    public void ana_sayfada_roma_komutan_resminin_görunup_görunmedigine_bakar() {
+        Assert.assertTrue(page.girisSayfasiKomutanResmi.isDisplayed());
     }
 
 }

@@ -67,4 +67,24 @@ public class MyMethods {
         String url=Driver.getDriver().getCurrentUrl();
         Assert.assertEquals(string,url);
     }
+
+    public void dilSec(){
+
+        for (int i=1;i<page.dilSecenekleri.size();i++){
+
+            Assert.assertTrue(page.dilSecenekleri.get(i).isDisplayed());
+
+            page.dilSecenekleri.get(i).click();
+
+            try {
+                Thread.sleep(350);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            if (i!=48){
+                page.dilSecenekleriLinki.click();
+            }
+        }
+    }
 }

@@ -1,7 +1,7 @@
-@sayfaGörunurlugu
+@US_01_sayfaGörunurlugu
 Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
 
-    Background: TC_001 Travian sayfasina gidis
+  Background: TC_001 Travian sayfasina gidis
       Given kullanici "travian" adresine gider
 
   @oyunDropdown
@@ -40,10 +40,26 @@ Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
   Scenario: TC_008 Kullanici haberler linkini kontrol eder
     Given haberler linkine tiklar ve geri döner
 
-  @buyukYazi
+  @buyukYaziGörunurMu
   Scenario: TC_009 Kullanici buyuk yazinin varligini kontrol eder
     Given ana sayfada buyuk yazinin görunup görunmedigine bakar
 
-  @kucukYazi
+  @kucukYaziGörunurMu
   Scenario: TC_010 Kullanici kucuk yazinin varligini kontrol eder
     Given ana sayfada kucuk yazinin görunup görunmedigine bakar
+
+  @hemenOynaGörunurMu
+  Scenario: TC_011 Kullanici hemen oyna yazisinin varligini kontrol eder
+    Given ana sayfada hemen oyna yazisinin görunup görunmedigine bakar
+
+  @kaleArkaPlaniResmiGörunurMu
+  Scenario: TC_012 Kullanici kale arka plan resminin varligini kontrol eder
+    Given ana sayfada kale arka plan resminin görunup görunmedigine bakar
+
+  @romaOrdusuResmiGörunurMu
+  Scenario: TC_013 Kullanici roma ordusu resminin varligini kontrol eder
+    Given ana sayfada roma ordusu resminin görunup görunmedigine bakar
+
+  @romaKomutaniResmiGörunurMu
+  Scenario: TC_014 Kullanici roma komutan resminin varligini kontrol eder
+    Given ana sayfada roma komutan resminin görunup görunmedigine bakar
