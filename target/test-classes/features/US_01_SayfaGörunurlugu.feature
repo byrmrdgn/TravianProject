@@ -63,3 +63,15 @@ Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
   @romaKomutaniResmiGörunurMu
   Scenario: TC_014 Kullanici roma komutan resminin varligini kontrol eder
     Given ana sayfada roma komutan resminin görunup görunmedigine bakar
+
+  @facebooklinki
+  Scenario: TC_015 Kullanici sayfanin altindaki facebook linkini kontrol eder
+    Given facebook linkine tiklar ve geri döner
+
+  @sayfaAltiDiscordlinki
+  Scenario: TC_016 Kullanici sayfanin altindaki discord linkini kontrol eder
+    Given sayfanin altindaki discord linkine tiklar
+
+  @sayfaYoutubelinki
+  Scenario: TC_017 Kullanici sayfanin altindaki youtube linkini kontrol eder
+    Given sayfanin altindaki youtube linkine tiklar

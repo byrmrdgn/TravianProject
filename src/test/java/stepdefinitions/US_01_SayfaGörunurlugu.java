@@ -156,4 +156,21 @@ public class US_01_SayfaGörunurlugu {
         Assert.assertTrue(page.girisSayfasiKomutanResmi.isDisplayed());
     }
 
+    @Given("facebook linkine tiklar ve geri döner")
+    public void facebook_linkine_tiklar_ve_geri_döner() {
+        page.facebookLinki.click();
+        myMethods.windowsHandleAl(ConfigurationReader.getProperty("travian_facebook_url"));
+    }
+
+    @Given("sayfanin altindaki discord linkine tiklar")
+    public void sayfanin_altindaki_discord_linkine_tiklar() {
+       page.sayfaAltiDiscordLinki.click();
+       myMethods.windowsHandleAl(ConfigurationReader.getProperty("sayfanin_altindaki_discord_linki"));
+    }
+
+    @Given("sayfanin altindaki youtube linkine tiklar")
+    public void sayfanin_altindaki_youtube_linkine_tiklar() {
+
+    }
+
 }
