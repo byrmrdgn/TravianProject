@@ -173,4 +173,18 @@ public class US_01_SayfaGörunurlugu {
 
     }
 
+    @Given("sayfanin altindaki destek linkine tiklar ve geri döner")
+    public void sayfanin_altindaki_destek_linkine_tiklar_ve_geri_döner() {
+        myMethods.linkiTiklaGeriDön(page.sayfaAltiDestekLinki);
+    }
+
+    @Given("sayfanin altindaki daha fazla oyna linkine tiklar ve geri döner")
+    public void sayfanin_altindaki_daha_fazla_oyna_linkine_tiklar_ve_geri_döner() {
+        myMethods.linkiTiklaGeriDön(page.sayfaAltiDahaFazlaOynaLinki);
+    }
+
+    @Given("sayfanin altindaki oyunk kurallari linkine tiklar ve geri döner")
+    public void sayfanin_altindaki_oyunk_kurallari_linkine_tiklar_ve_geri_döner() {
+        myMethods.linkiTiklaGeriDön(page.sayfaAltiOyunKurallariLinki);
+    }
 }

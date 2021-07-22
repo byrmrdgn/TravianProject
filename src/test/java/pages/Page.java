@@ -104,4 +104,16 @@ public class Page {
     @FindBy(xpath = "(//*[.='I agree'])[4]")
     public WebElement Iagree;
 
+    @FindBy(xpath = "//a[@title='Destek']")
+    public WebElement sayfaAltiDestekLinki;
+
+    @FindBy(xpath = "//a[@title='Daha fazla oyun']")
+    public WebElement sayfaAltiDahaFazlaOynaLinki;
+
+    @FindBy(xpath = "//a[@title='Oyun Kuralları']")
+    public WebElement sayfaAltiOyunKurallariLinki;
+
+
+
+
 }

@@ -72,6 +72,18 @@ Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
   Scenario: TC_016 Kullanici sayfanin altindaki discord linkini kontrol eder
     Given sayfanin altindaki discord linkine tiklar
 
-  @sayfaYoutubelinki
+  @sayfaAltiYoutubelinki
   Scenario: TC_017 Kullanici sayfanin altindaki youtube linkini kontrol eder
     Given sayfanin altindaki youtube linkine tiklar
+
+  @sayfaAltiDesteklinki
+  Scenario: TC_018 Kullanici sayfanin altindaki destek linkini kontrol eder
+    Given sayfanin altindaki destek linkine tiklar ve geri döner
+
+  @sayfaAltiDahaFazlaOynalinki
+  Scenario: TC_019 Kullanici sayfanin altindaki daha fazla oyna linkini kontrol eder
+    Given sayfanin altindaki daha fazla oyna linkine tiklar ve geri döner
+
+  @sayfaAltiOyunKurallarilinki
+  Scenario: TC_020 Kullanici sayfanin altindaki oyun kurallari linkini kontrol eder
+    Given sayfanin altindaki oyunk kurallari linkine tiklar ve geri döner
