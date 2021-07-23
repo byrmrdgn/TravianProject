@@ -170,6 +170,8 @@ public class US_01_SayfaGörunurlugu {
 
     @Given("sayfanin altindaki youtube linkine tiklar")
     public void sayfanin_altindaki_youtube_linkine_tiklar() {
+        page.youTubeLinki.click();
+        myMethods.windowsHandleAl(ConfigurationReader.getProperty("travian_youtube_linki"));
 
     }
 

@@ -101,7 +101,7 @@ public class Page {
     @FindBy (xpath = "(//a[@target='_blank'])[10]")
     public WebElement youTubeLinki;
 
-    @FindBy(xpath = "(//*[.='I agree'])[4]")
+    @FindBy(xpath = "(//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc IIdkle'])[2]")
     public WebElement Iagree;
 
     @FindBy(xpath = "//a[@title='Destek']")
