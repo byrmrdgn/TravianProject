@@ -113,6 +113,22 @@ public class Page {
     @FindBy(xpath = "//a[@title='Oyun Kuralları']")
     public WebElement sayfaAltiOyunKurallariLinki;
 
+    @FindBy(xpath = "//div[@class='header']")
+    public WebElement oyunDunyasiSec;
+
+    @FindBy(xpath = "//div[@class='regionSelection']/div")
+    public List<WebElement> bölgeSec;
+
+    @FindBy(id = "changeRegion")
+    public WebElement farkliBölgeSec;
+
+    @FindBy(xpath = "//i[@class='calendarIcon']")
+    public WebElement takvimResmi;
+
+    @FindBy(xpath = "(//h4)[2]")
+    public WebElement sunucuBölgesininAdi;
+
+
 
 
 

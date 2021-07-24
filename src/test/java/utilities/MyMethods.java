@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.Page;
 
+import java.util.List;
 import java.util.Set;
 
 public class MyMethods {
@@ -85,6 +86,36 @@ public class MyMethods {
             if (i!=48){
                 page.dilSecenekleriLinki.click();
             }
+        }
+    }
+
+    public void sec(List <WebElement> element, WebElement element1){
+
+        for (int i=1;i<element.size();i++){
+
+           element.get(i).click();
+          switch (page.sunucuBölgesininAdi.getText()){
+               case "Uluslararası sunucu":
+                   Assert.assertEquals(page.sunucuBölgesininAdi.getText(),"Uluslararası sunucu");
+                   element1.click();
+                   break;
+               case "Arap sunucusu":
+                   Assert.assertEquals(page.sunucuBölgesininAdi.getText(),ConfigurationReader.getProperty("arap_sunucusu"));
+                   element1.click();
+                   break;
+               case "Amerikan sunucusu":
+                   Assert.assertEquals(page.sunucuBölgesininAdi.getText(),ConfigurationReader.getProperty("amerikan_sunucusu"));
+                   element1.click();
+                   break;
+               case "Asya sunucusu":
+                   Assert.assertEquals(page.sunucuBölgesininAdi.getText(),ConfigurationReader.getProperty("asya_sunucusu"));
+                   element1.click();
+                   break;
+               case "Avrupa sunucusu":
+                   Assert.assertEquals(page.sunucuBölgesininAdi.getText(),ConfigurationReader.getProperty("avrupa_sunucusu"));
+                   element1.click();
+                   break;
+           }
         }
     }
 }
