@@ -114,7 +114,7 @@ public class Page {
     public WebElement sayfaAltiOyunKurallariLinki;
 
     @FindBy(xpath = "//div[@class='header']")
-    public WebElement oyunDunyasiSec;
+    public WebElement oyunDunyasiniDegistir;
 
     @FindBy(xpath = "//div[@class='regionSelection']/div")
     public List<WebElement> bölgeSec;
@@ -122,8 +122,8 @@ public class Page {
     @FindBy(id = "changeRegion")
     public WebElement farkliBölgeSec;
 
-    @FindBy(xpath = "//i[@class='calendarIcon']")
-    public WebElement takvimResmi;
+    @FindBy(xpath = "//*[@id=\"Registration\"]//div[2]/div[1]/span")
+    public List <WebElement> sunucuYasi;
 
     @FindBy(xpath = "(//h4)[2]")
     public WebElement sunucuBölgesininAdi;
