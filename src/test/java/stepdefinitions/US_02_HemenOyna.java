@@ -68,6 +68,21 @@ public class US_02_HemenOyna {
 
         }
     }
+
+    @Given("acilan pencereden amerika bölgesinin oynandigi gun sayilarina bakar")
+    public void acilan_pencereden_amerika_bölgesinin_oynandigi_gun_sayilarina_bakar() {
+        page.bölgeSec.get(3).click();
+        for (int i =0 ; i<page.sunucuYasi.size(); i++){
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            //System.out.println(page.sunucuYasi.get(i).getText());
+            Assert.assertTrue(page.sunucuYasi.get(i).isDisplayed());
+
+        }
+    }
 }
 
 

@@ -23,3 +23,10 @@ Feature: Kullanici Hemen Oyna linkine tikladigi zaman oyuna kayit olabilmeli
     And acilan pencereden oyun dunyalarina bakar
     And acilan pencereden arap bölgesinin oynandigi gun sayilarina bakar
     Then en kucuk gun sayisi olani secer
+
+  @hemenOynaAmerika
+  Scenario: TC_024 Kullanici Hemen Oyna linki icinde var olan bölgelerin oynandigi gun sayisini kotrol eder
+    Given hemen oyna linkine tiklar
+    And acilan pencereden oyun dunyalarina bakar
+    And acilan pencereden amerika bölgesinin oynandigi gun sayilarina bakar
+    Then en kucuk gun sayisi olani secer
