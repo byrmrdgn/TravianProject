@@ -37,3 +37,16 @@ Feature: Kullanici Hemen Oyna linkine tikladigi zaman oyuna kayit olabilmeli
     And acilan pencereden oyun dunyalarina bakar
     And acilan pencereden asya bölgesinin oynandigi gun sayilarina bakar
     Then en kucuk gun sayisi olani secer
+
+@hemenOynaAvrupa
+  Scenario: TC_026 Kullanici Hemen Oyna linki icinde var olan bölgelerin oynandigi gun sayisini kotrol eder
+    Given hemen oyna linkine tiklar
+    And acilan pencereden oyun dunyalarina bakar
+    And acilan pencereden avrupa bölgesinin oynandigi gun sayilarina bakar
+    Then en kucuk gun sayisi olani secer
+
+@genelKontrol
+  Scenario: TC_027 Kullanici Hemen Oyna linki icinde var olan bölgelerin oynandigi gun sayilarini kotrol eder
+  Given hemen oyna linkine tiklar
+  And oyun dunyasini degistir linkine tiklar
+  Then acilan dunyalardan en yeni server'i secer

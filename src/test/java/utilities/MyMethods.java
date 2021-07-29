@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.Page;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -94,7 +96,8 @@ public class MyMethods {
         for (int i=1;i<element.size();i++){
 
            element.get(i).click();
-          switch (page.sunucuBölgesininAdi.getText()){
+
+          /*switch (page.sunucuBölgesininAdi.getText()){
                case "Uluslararası sunucu":
                    Assert.assertEquals(page.sunucuBölgesininAdi.getText(),"Uluslararası sunucu");
                    element1.click();
@@ -115,7 +118,28 @@ public class MyMethods {
                    Assert.assertEquals(page.sunucuBölgesininAdi.getText(),ConfigurationReader.getProperty("avrupa_sunucusu"));
                    element1.click();
                    break;
-           }
+           }*/
+            element1.click();
+
         }
+    }
+
+    public void selectNewestServer(List <WebElement>  element){
+        List <Integer> list=new ArrayList<>();
+        int siralamaIcin;
+        int enKucuk = 0;
+
+        for (int i = 1; i<element.size();i++){
+            siralamaIcin= Integer.parseInt(element.get(i).getText());
+            list.add(siralamaIcin);
+
+            Collections.sort(list);
+            if (list.get(0)==Integer.parseInt(element.get(i).getText())){
+                enKucuk=i;
+            }
+        }
+        System.out.println(list);
+        element.get(enKucuk).click();
+        System.out.println("En yeni Server "+element.get(0).getText()+" gun önce acildi.");
     }
 }
