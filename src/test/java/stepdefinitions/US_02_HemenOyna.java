@@ -84,16 +84,17 @@ public class US_02_HemenOyna {
     public void acilan_dunyalardan_en_yeni_server_i_secer() {
 
         List<Integer> list = new ArrayList<>();
-        //int enKucuk = 0;
 
         for (int i=1;i<page.bölgeSec.size();i++) {
             page.bölgeSec.get(i).click();
 
             int siralamaIcin;
             for (int j = 1; j < page.sunucuYasi.size(); j++) {
-                siralamaIcin = Integer.parseInt(page.sunucuYasi.get(j).getText());
+                siralamaIcin = Integer.parseInt(page.sunucuYasi.get(j).getText());// yarin bu satiri direk list add icine alayim ve siralama icin olsuturulan variable'i sileyim.
                 list.add(siralamaIcin);
-                Collections.sort(list);
+                Collections.sort(list); // yapabilirsem siralama yapmadan if ile listdeki elemanlari j ile karsilastirayim
+                System.out.println(list);
+
             }
             try {
                 Thread.sleep(500);
@@ -103,6 +104,23 @@ public class US_02_HemenOyna {
             page.farkliBölgeSec.click();
         }
         System.out.println(list);
+        System.out.println(list.get(0));
+
+        for (int i=1;i<page.bölgeSec.size();i++) {
+            page.bölgeSec.get(i).click();
+
+            int siralamaIcin;
+            for (int j = 1; j < page.sunucuYasi.size(); j++) {
+                if (list.get(0)==Integer.parseInt(page.sunucuYasi.get(j).getText())){
+                    page.sunucuYasi.get(j).click();
+                    break;
+                }
+
+            }
+            page.farkliBölgeSec.click();
+
+        }
+
     }
 }
 
