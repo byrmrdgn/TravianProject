@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.sl.In;
 import org.junit.Assert;
 import pages.Page;
+import utilities.ConfigurationReader;
 import utilities.MyMethods;
 
 import java.util.ArrayList;
@@ -90,38 +91,62 @@ public class US_02_HemenOyna {
 
             int siralamaIcin;
             for (int j = 1; j < page.sunucuYasi.size(); j++) {
-                siralamaIcin = Integer.parseInt(page.sunucuYasi.get(j).getText());// yarin bu satiri direk list add icine alayim ve siralama icin olsuturulan variable'i sileyim.
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                siralamaIcin = Integer.parseInt(page.sunucuYasi.get(j).getText());
                 list.add(siralamaIcin);
-                Collections.sort(list); // yapabilirsem siralama yapmadan if ile listdeki elemanlari j ile karsilastirayim
-                System.out.println(list);
-
+                Collections.sort(list);
             }
             try {
-                Thread.sleep(500);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             page.farkliBölgeSec.click();
         }
-        System.out.println(list);
-        System.out.println(list.get(0));
 
-        for (int i=1;i<page.bölgeSec.size();i++) {
-            page.bölgeSec.get(i).click();
-
-            int siralamaIcin;
-            for (int j = 1; j < page.sunucuYasi.size(); j++) {
-                if (list.get(0)==Integer.parseInt(page.sunucuYasi.get(j).getText())){
-                    page.sunucuYasi.get(j).click();
-                    break;
+        try{
+            for (int i=1;i<page.bölgeSec.size();i++) {
+                page.bölgeSec.get(i).click();
+                for (int j = 1; j < page.sunucuYasi.size(); j++) {
+                    if (list.get(0)==Integer.parseInt(page.sunucuYasi.get(j).getText())){
+                        page.sunucuYasi.get(j).click();
+                        break;
+                    }
                 }
-
+                page.farkliBölgeSec.click();
             }
-            page.farkliBölgeSec.click();
-
-        }
-
+        }catch (Exception e){}
     }
+
+    @Then("ePosta kutusuna e posta adresini girer")
+    public void e_posta_kutusuna_e_posta_adresini_girer() {
+        page.emailKutusu.sendKeys(ConfigurationReader.getProperty("gecerliKullanici_email"));
+    }
+    @Then("hemen Kaydol butonuna tiklar")
+    public void hemen_kaydol_butonuna_tiklar() {
+        page.hemenKaydolButonu.click();
+    }
+    @Then("isim kutusuna ismini girer")
+    public void isim_kutusuna_ismini_girer() {
+        page.isimKutusu.sendKeys(ConfigurationReader.getProperty("kullanici_ismi"));
+    }
+
+    @Then("email kutusuna gecersiz email girer")
+    public void email_kutusuna_gecersiz_email_girer() {
+        page.emailKutusu.sendKeys(ConfigurationReader.getProperty("gecersizKullaniciEmail1"));
+    }
+
+    /* suana kadar en yeni server bulundu. bundan sonra yeni bir us icinde kayit islemi yapilacak.
+    a) gecersiz mail
+    b) gecerli mail
+    c) mailsiz
+    d) isimsiz girisler yapilacak
+
+     */
 }
 
 

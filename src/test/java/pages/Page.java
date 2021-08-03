@@ -128,6 +128,15 @@ public class Page {
     @FindBy(xpath = "(//h4)[2]")
     public WebElement sunucuBölgesininAdi;
 
+    @FindBy(id = "playerName")
+    public WebElement isimKutusu;
+
+    @FindBy(id = "email")
+    public WebElement emailKutusu;
+
+    @FindBy (xpath = "//button[@class='button default']")
+    public WebElement hemenKaydolButonu;
+
 
 
 
