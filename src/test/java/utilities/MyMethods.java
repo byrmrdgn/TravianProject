@@ -142,4 +142,24 @@ public class MyMethods {
         element.get(enKucuk).click();
         System.out.println("En yeni Server "+element.get(0).getText()+" gun önce acildi.");
     }
+
+    public void milletSec(String string){
+            switch (string){
+                case "galyalilar":
+                    page.oyundakiMilletler.get(0).click();
+                    break;
+                case "romalilar":
+                    page.oyundakiMilletler.get(1).click();
+                    break;
+                case "cermenler":
+                    page.oyundakiMilletler.get(2).click();
+                    break;
+                case "misirlilar":
+                    page.oyundakiMilletler.get(3).click();
+                    break;
+                case "hunlar":
+                    page.oyundakiMilletler.get(4).click();
+                    break;
+            }
+    }
 }

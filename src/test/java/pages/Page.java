@@ -68,7 +68,7 @@ public class Page {
     @FindBy (xpath = "(//a[@target='_blank'])[2]")
     public WebElement haberlerLinki;
 
-    @FindBy(partialLinkText = "Giriş")
+    @FindBy(xpath = "//a[@title='Giriş']")
     public WebElement girisLinki;
 
     @FindBy (xpath = "//h1")
@@ -131,11 +131,36 @@ public class Page {
     @FindBy(id = "playerName")
     public WebElement isimKutusu;
 
+    @FindBy(xpath = "//*[.='Open Beta']")
+    public WebElement betaServer;
+
+    @FindBy(id = "password")
+    public WebElement passwordKutusu;
+
     @FindBy(id = "email")
     public WebElement emailKutusu;
 
     @FindBy (xpath = "//button[@class='button default']")
     public WebElement hemenKaydolButonu;
+
+    @FindBy(className = "checkmark")
+    public WebElement genelSartlarKabul;
+
+    @FindBy(id = "usernameOrEmail")
+    public WebElement kullaniciAdiKutusu;
+
+    @FindBy(xpath = "//*[.='Giriş yap ve oyna']")
+    public WebElement girisYapButonu;
+
+    @FindBy(xpath = "//*[@id=\"tribeSelectors\"]/label")
+    public List<WebElement> oyundakiMilletler;
+
+    @FindBy(xpath = "//button[@value='Onayla']")
+    public List<WebElement>  milletiOnaylaButonu;
+
+    @FindBy(xpath = "//*[@value='<span>HEMEN OYNA</span>']")
+    public List<WebElement>  haritayiOnayla;
+
 
 
 

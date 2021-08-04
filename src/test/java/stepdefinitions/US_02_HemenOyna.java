@@ -147,6 +147,16 @@ public class US_02_HemenOyna {
     d) isimsiz girisler yapilacak
 
      */
+
+    @Then("email kutusuna email girer")
+    public void email_kutusuna_email_girer() {
+       page.emailKutusu.sendKeys(ConfigurationReader.getProperty("gecerliKullanici_email"));
+    }
+
+    @Then("genel sartlari kabul eder")
+    public void genel_sartlari_kabul_eder() {
+        page.genelSartlarKabul.click();
+    }
 }
 
 
