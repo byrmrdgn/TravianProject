@@ -13,7 +13,7 @@ public class US_03_GirisYap {
 
     Page page=new Page();
     MyMethods myMethods=new MyMethods();
-    JSExecutor jsExecutor=new JSExecutor();
+    //JSExecutor jsExecutor=new JSExecutor();
 
     @Given("giris yap linkkine tiklar")
     public void giris_yap_linkkine_tiklar() {

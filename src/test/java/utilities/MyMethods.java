@@ -162,4 +162,26 @@ public class MyMethods {
                     break;
             }
     }
+
+    public void kaynaklariTespitEt(List <WebElement> element, WebElement element1){
+
+        List <Integer> odunKaynaklari = new ArrayList<>();
+        List <Integer> tahilKaynaklari = new ArrayList<>();
+        List <Integer> tuglaKaynaklari = new ArrayList<>();
+        List <Integer> demirKaynaklari = new ArrayList<>();
+
+        for (int i=0;i<element.size();i++){
+            element.get(i).click();
+            if (element1.getText().contains("Oduncu")){
+                odunKaynaklari.add(i);
+            } else if (element1.getText().contains("Tarla")){
+                tahilKaynaklari.add(i);
+            } else if (element1.getText().contains("Demir")){
+                demirKaynaklari.add(i);
+            } else if (element1.getText().contains("Tuğla")){
+                tuglaKaynaklari.add(i);
+            }
+            Driver.getDriver().navigate().back();
+        }
+    }
 }
