@@ -54,4 +54,15 @@ public class US_04_OyunSayfasiAraYuzu {
       page.buSeviyeyiGelistir1.click();
     }
 
+    @Given("kullanici bina alanlarina tiklar ve geri döner")
+    public void kullanici_bina_alanlarina_tiklar_ve_geri_döner() {
+
+      myMethods.acceptAll();
+      page.köyMerkeziLinki.click();
+      for (int i=0;i<page.köyiciBinaAlanlari.size();i++){
+          page.köyiciBinaAlanlari.get(i).click();
+          Driver.getDriver().navigate().back();
+      }
+    }
+
 }

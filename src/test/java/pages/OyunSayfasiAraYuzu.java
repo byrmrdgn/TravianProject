@@ -19,5 +19,31 @@ public class OyunSayfasiAraYuzu {
     @FindBy(className = "titleInHeader")
     public WebElement hammaddeTurununBasligi;
 
+    @FindBy(xpath = "//div[@class='section1']//button")
+    public WebElement buSeviyeyiGelistir1;
+
+    @FindBy(className = "village resourceView")
+    public WebElement hammaddelerLinki;
+
+    @FindBy(xpath = "//a[@accesskey='2']")
+    public WebElement köyMerkeziLinki;
+
+    @FindBy(className = "map")
+    public WebElement haritaLinki;
+
+    @FindBy(xpath = "//a[@accesskey='4']")
+    public WebElement istatistikLinki;
+
+    @FindBy(className = "reports")
+    public WebElement raporlarLinki;
+
+    @FindBy(className = "messages")
+    public WebElement mesajlarLinki;
+
+    @FindBy(xpath = "//a[@accesskey='7']")
+    public WebElement gunlukGörevlerLinki;
+
+    @FindBy(className = "emptyBuildingSlot")
+    public List <WebElement> köyiciBinaAlanlari;
 
 }

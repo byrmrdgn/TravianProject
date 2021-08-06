@@ -17,4 +17,9 @@ Feature: Hammadde Kaynaklari
     And kullanici hammadde kaynaklarina tiklar ve geri döner
     And kullanici en az gelismis olani odun kaynagini secer ve onu gelistirir
 
+  @binaAlanlari
+  Scenario: Kullanici alanlarini kontrol eder
+    And kullanici bina alanlarina tiklar ve geri döner
+
+
 
