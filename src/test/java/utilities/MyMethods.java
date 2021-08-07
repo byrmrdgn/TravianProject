@@ -140,7 +140,7 @@ public class MyMethods {
         }
         System.out.println(list);
         element.get(enKucuk).click();
-        System.out.println("En yeni Server "+element.get(0).getText()+" gun önce acildi.");
+        //System.out.println("En yeni Server "+element.get(0).getText()+" gun önce acildi.");
     }
 
     public void milletSec(String string){

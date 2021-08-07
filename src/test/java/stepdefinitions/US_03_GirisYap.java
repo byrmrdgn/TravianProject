@@ -41,6 +41,11 @@ public class US_03_GirisYap {
     }
 
 
+    @Then("kullanici cerez uyarisini kabul eder")
+    public void kullanici_cerez_uyarisini_kabul_eder() {
+        myMethods.acceptAll();
+    }
+
     /*
 
     Bu satirlar yeni server'a kayit olurken gerekli olan millet secmeyi ve haritadan yer belirlemeyi yapiyor kodlar son asamaya kadar gelip

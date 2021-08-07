@@ -10,7 +10,7 @@ import utilities.Driver;
 import utilities.MyMethods;
 
 
-public class US_01_SayfaGörunurlugu {
+public class US_01_IlkSayfaninGörunurlugu {
 /*
                         ****************************  NESNELER     ******************
 */

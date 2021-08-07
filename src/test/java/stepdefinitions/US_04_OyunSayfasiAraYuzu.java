@@ -1,6 +1,8 @@
 package stepdefinitions;
 
+import io.cucumber.java.bs.A;
 import io.cucumber.java.en.Given;
+import org.openqa.selenium.interactions.Actions;
 import pages.OyunSayfasiAraYuzu;
 import utilities.Driver;
 import utilities.MyMethods;
@@ -9,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class US_04_OyunSayfasiAraYuzu {
+
+    Actions actions=new Actions(Driver.getDriver());
 
     List <Integer> odunKaynaklari = new ArrayList<>();
     List <Integer> tahilKaynaklari = new ArrayList<>();
@@ -54,15 +58,18 @@ public class US_04_OyunSayfasiAraYuzu {
       page.buSeviyeyiGelistir1.click();
     }
 
-    @Given("kullanici bina alanlarina tiklar ve geri döner")
-    public void kullanici_bina_alanlarina_tiklar_ve_geri_döner() {
-
-      myMethods.acceptAll();
-      page.köyMerkeziLinki.click();
-      for (int i=0;i<page.köyiciBinaAlanlari.size();i++){
-          page.köyiciBinaAlanlari.get(i).click();
-          Driver.getDriver().navigate().back();
-      }
-    }
+//    @Given("kullanici bina alanlarina tiklar ve geri döner")
+//    public void kullanici_bina_alanlarina_tiklar_ve_geri_döner() {
+//
+//      myMethods.acceptAll();
+//      page.köyMerkeziLinki.click();
+//      //for (int i=0;i<page.köyiciBinaAlanlari.size();i++){
+//
+//          actions.moveToElement(page.köyiciBinaAlanlari.get(20)).click().perform();
+//
+//          //actions.moveToElement(page.köyiciBinaAlanlari.get(i)).click().perform();
+//          //Driver.getDriver().navigate().back();
+//      //}
+//    }
 
 }

@@ -17,6 +17,10 @@ public class Page {
     @FindBy(id = "cmpbntyestxt")
     public WebElement acceptAll;
 
+    @FindBy(id = "cmpbntnotxt")
+    public WebElement rejecttAll;
+
+
     @FindBy(xpath = "(//li [@class='dropdown'])[1]")
     public WebElement oyunDropdown;
 

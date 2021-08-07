@@ -25,9 +25,6 @@ public class OyunSayfasiAraYuzu {
     @FindBy(className = "village resourceView")
     public WebElement hammaddelerLinki;
 
-    @FindBy(xpath = "//a[@accesskey='2']")
-    public WebElement köyMerkeziLinki;
-
     @FindBy(className = "map")
     public WebElement haritaLinki;
 
@@ -43,7 +40,6 @@ public class OyunSayfasiAraYuzu {
     @FindBy(xpath = "//a[@accesskey='7']")
     public WebElement gunlukGörevlerLinki;
 
-    @FindBy(className = "emptyBuildingSlot")
-    public List <WebElement> köyiciBinaAlanlari;
+
 
 }

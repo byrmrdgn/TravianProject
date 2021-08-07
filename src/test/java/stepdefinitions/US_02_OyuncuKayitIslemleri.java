@@ -13,7 +13,7 @@ import java.util.Collections;
 import java.util.List;
 
 
-public class US_02_HemenOyna {
+public class US_02_OyuncuKayitIslemleri {
 
     Page page=new Page();
     MyMethods myMethods=new MyMethods();
