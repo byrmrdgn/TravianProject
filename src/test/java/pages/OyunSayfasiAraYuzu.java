@@ -13,15 +13,6 @@ public class OyunSayfasiAraYuzu {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//div[@class='labelLayer']")
-    public List<WebElement> hammaddeKaynaklari;
-
-    @FindBy(className = "titleInHeader")
-    public WebElement hammaddeTurununBasligi;
-
-    @FindBy(xpath = "//div[@class='section1']//button")
-    public WebElement buSeviyeyiGelistir1;
-
     @FindBy(className = "village resourceView")
     public WebElement hammaddelerLinki;
 

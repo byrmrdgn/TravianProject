@@ -14,10 +14,7 @@ public class US_04_OyunSayfasiAraYuzu {
 
     Actions actions=new Actions(Driver.getDriver());
 
-    List <Integer> odunKaynaklari = new ArrayList<>();
-    List <Integer> tahilKaynaklari = new ArrayList<>();
-    List <Integer> tuglaKaynaklari = new ArrayList<>();
-    List <Integer> demirKaynaklari = new ArrayList<>();
+
 
 
     OyunSayfasiAraYuzu page=new OyunSayfasiAraYuzu();

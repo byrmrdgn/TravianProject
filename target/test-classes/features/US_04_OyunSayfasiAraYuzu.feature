@@ -1,4 +1,4 @@
-Feature: Hammadde Kaynaklari
+Feature: Hammadde KaynaklariEski
 
   Background: TC_001 Travian sayfasina gidis
   Given kullanici "travian" adresine gider
