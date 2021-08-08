@@ -1,7 +1,7 @@
 @KöyMerkezi
 
 Feature: Köy Merkezi
-  Background: TC_001 Travian sayfasina gidis
+Background: TC_001 Travian sayfasina gidis
     Given kullanici "travian" adresine gider
     And giris yap linkkine tiklar
     And oynadigi serveri secer
@@ -13,7 +13,7 @@ Feature: Köy Merkezi
 @AskeriUsKur
   Scenario: Kullanici Köyune Askeri Us Kurar
     And Kullanici Köy Merkezi linkine tiklar
-    And bina gelistirmek icin alan secer
+    And askeri us kurmak icin alan secer
     And ve binayi insa eder
 
 @AskeriUsseGir
@@ -25,4 +25,29 @@ Feature: Köy Merkezi
   Scenario: Kullanici Askeri ussu gelsitirir
     And Kullanici Köy Merkezi linkine tiklar
     And askeri usse giris yapar
-    And ve askeri ussu gelistirir
+    And ve binayi gelistirir
+
+@SiginakKur
+  Scenario: Kullanici Köyune Siginak Kurar
+    And Kullanici Köy Merkezi linkine tiklar
+    And siginak kurmak icin alan secer
+    And ve binayi insa eder
+
+@SiginagiGelistir
+  Scenario: Kullanici siginagi gelistirir
+    And Kullanici Köy Merkezi linkine tiklar
+    And siginaga giris yapar
+    And ve binayi gelistirir
+
+@HammaddeDeposuKur
+  Scenario: Kullanici Köyune Hammadde Deposu Kurar
+    And Kullanici Köy Merkezi linkine tiklar
+    And hammadde deposu kurmak icin alan secer
+    And ve binayi insa eder
+
+@TahilAmbariKur
+  Scenario: Kullanici Köyune Tahil ambari Kurar
+    And Kullanici Köy Merkezi linkine tiklar
+    And tahil ambari kurmak icin alan secer
+    And ve binayi insa eder
+

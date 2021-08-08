@@ -19,16 +19,14 @@ public class KöyMerkeziPage {
     @FindBy(xpath = "//div[@id='villageContent']//div//a")
     public List <WebElement> köyiciBinaAlanlari;
 
-
-
     @FindBy(xpath = "(//div[@id='villageContent']/div/a)[1]")
-    public WebElement insaAlani1;
+    public WebElement siginakAlani;
 
     @FindBy(xpath = "(//div[@id='villageContent']/div/a)[2]")
-    public WebElement insaAlani2;
+    public WebElement hammaddeDepoAlani;
 
     @FindBy(xpath = "(//div[@id='villageContent']/div/a)[3]")
-    public WebElement insaAlani3;
+    public WebElement tahilAmbariAlani;
 
     @FindBy(xpath = "(//div[@id='villageContent']/div/a)[4]")
     public WebElement insaAlani4;

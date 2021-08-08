@@ -19,9 +19,9 @@ public class KöyMerkeziStepDef {
         köyMerkeziPage.köyMerkeziLinki.click();
     }
 
-    @Then("bina gelistirmek icin alan secer")
-    public void bina_gelistirmek_icin_alan_secer() {
-        actions.moveToElement(köyMerkeziPage.askeriUsAlani).click().perform();
+    @Then("askeri us kurmak icin alan secer")
+    public void askeri_us_kurmak_icin_alan_secer() {
+       myMethods.binaIcinAlanSec(köyMerkeziPage.askeriUsAlani);
     }
 
     @Then("ve binayi insa eder")
@@ -34,9 +34,29 @@ public class KöyMerkeziStepDef {
         actions.moveToElement(köyMerkeziPage.askeriUsAlani).click().perform();
     }
 
-    @Then("ve askeri ussu gelistirir")
-    public void ve_askeri_ussu_gelistirir() {
+    @Then("ve binayi gelistirir")
+    public void ve_binayi_gelistirir() {
         köyMerkeziPage.buSeviyeyeGelistir.click();
+    }
+
+    @Then("siginak kurmak icin alan secer")
+    public void siginak_kurmak_icin_alan_secer() {
+        myMethods.binaIcinAlanSec(köyMerkeziPage.siginakAlani);
+    }
+
+    @Then("siginaga giris yapar")
+    public void siginaga_giris_yapar() {
+        actions.moveToElement(köyMerkeziPage.siginakAlani).click().perform();
+    }
+
+    @Then("hammadde deposu kurmak icin alan secer")
+    public void hammadde_deposu_kurmak_icin_alan_secer() {
+        myMethods.binaIcinAlanSec(köyMerkeziPage.hammaddeDepoAlani);
+    }
+
+    @Then("tahil ambari kurmak icin alan secer")
+    public void tahil_ambari_kurmak_icin_alan_secer() {
+        myMethods.binaIcinAlanSec(köyMerkeziPage.tahilAmbariAlani);
     }
 
 }

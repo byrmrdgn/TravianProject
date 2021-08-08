@@ -22,7 +22,7 @@ public class US_04_OyunSayfasiAraYuzu {
 
     OyunSayfasiAraYuzu page=new OyunSayfasiAraYuzu();
     MyMethods myMethods=new MyMethods();
-
+/*
     @Given("kullanici hammadde kaynaklarina tiklar ve geri döner")
     public void kullanici_hammadde_kaynaklarina_tiklar_ve_geri_döner() {
 
@@ -57,6 +57,7 @@ public class US_04_OyunSayfasiAraYuzu {
       }
       page.buSeviyeyiGelistir1.click();
     }
+    */
 
 //    @Given("kullanici bina alanlarina tiklar ve geri döner")
 //    public void kullanici_bina_alanlarina_tiklar_ve_geri_döner() {

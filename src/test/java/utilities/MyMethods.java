@@ -184,4 +184,8 @@ public class MyMethods {
             Driver.getDriver().navigate().back();
         }
     }
+
+    public void binaIcinAlanSec(WebElement element) {
+        actions.moveToElement(element).click().perform();
+    }
 }
