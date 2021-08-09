@@ -51,3 +51,8 @@ Background: TC_001 Travian sayfasina gidis
     And tahil ambari kurmak icin alan secer
     And ve binayi insa eder
 
+@MerkezBinasiniGelistir
+  Scenario: Kullanici Merkez binasini gelistirir
+    And Kullanici Köy Merkezi linkine tiklar
+    And merkez binasina giris yapar
+    And ve binayi gelistirir

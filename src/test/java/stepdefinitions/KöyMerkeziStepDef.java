@@ -59,4 +59,9 @@ public class KöyMerkeziStepDef {
         myMethods.binaIcinAlanSec(köyMerkeziPage.tahilAmbariAlani);
     }
 
+    @Then("merkez binasina giris yapar")
+    public void merkez_binasina_giris_yapar() {
+        myMethods.binaIcinAlanSec(köyMerkeziPage.merkezBinasi);
+    }
+
 }
