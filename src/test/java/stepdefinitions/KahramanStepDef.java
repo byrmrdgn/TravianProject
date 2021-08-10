@@ -35,4 +35,19 @@ public class KahramanStepDef {
     public void birinci_itemi_kullanir() {
         kahramanPage.itemKutusu1.click();
     }
+
+    @Given("saldiri esnasinda savas")
+    public void saldiri_esnasinda_savas() {
+        kahramanPage.saldiriEsnasindaSavas.click();
+    }
+
+    @Given("saldiri esnasinda saklan")
+    public void saldiri_esnasinda_saklan() {
+        kahramanPage.saldiriEsnasindaSaklan.click();
+    }
+
+    @Given("degisiklikleri kaydeder")
+    public void degisiklikleri_kaydeder() {
+        kahramanPage.kahramandakiDegisiklikleriKaydet.click();
+    }
 }

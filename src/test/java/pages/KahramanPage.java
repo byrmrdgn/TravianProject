@@ -50,6 +50,14 @@ public class KahramanPage {
     @FindBy(id = "inventory_1")
     public WebElement itemKutusu1;
 
+    @FindBy(id = "attackBehaviourFight")
+    public WebElement saldiriEsnasindaSavas;
+
+    @FindBy(id = "attackBehaviourHide")
+    public WebElement saldiriEsnasindaSaklan;
+
+    @FindBy(id = "saveHeroAttributes")
+    public WebElement kahramandakiDegisiklikleriKaydet;
 
 
 

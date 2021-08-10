@@ -63,3 +63,9 @@ Background: TC_001 Travian sayfasina gidis
     And kisla kurmak icin alan secer
     And askeri yapi kurmak icin askeri butona tiklar
     And ve binayi insa eder
+
+@PazarYeriKur
+  Scenario: Kullanici Köyune Pazar Yeri Kurar
+    And Kullanici Köy Merkezi linkine tiklar
+    And pazar yeri kurmak icin alan secer
+    And ve binayi insa eder

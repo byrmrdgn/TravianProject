@@ -65,7 +65,7 @@ public class KöyMerkeziPage {
     public WebElement kislaAlani;
 
     @FindBy(xpath = "(//div[@id='villageContent']/div/a)[13]")
-    public WebElement insaAlani13;
+    public WebElement pazarAlani;
 
     @FindBy(xpath = "(//div[@id='villageContent']/div/a)[14]")
     public WebElement insaAlani14;
@@ -90,6 +90,9 @@ public class KöyMerkeziPage {
 
     @FindBy(xpath = "(//div[@id='villageContent']/div/a)[21]")
     public WebElement askeriUsAlani;
+
+    @FindBy(xpath = "//a[@class='level colorLayer notNow underConstruction aid40 teuton']")
+    public WebElement toprakSiper;
 
 
 

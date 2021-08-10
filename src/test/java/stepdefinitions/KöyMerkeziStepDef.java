@@ -74,4 +74,9 @@ public class KöyMerkeziStepDef {
         köyMerkeziPage.askeriYapiKur.click();
     }
 
+    @Then("pazar yeri kurmak icin alan secer")
+    public void pazar_yeri_kurmak_icin_alan_secer() {
+        myMethods.binaIcinAlanSec(köyMerkeziPage.pazarAlani);
+    }
+
 }

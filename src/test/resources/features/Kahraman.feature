@@ -21,3 +21,15 @@ Feature: Kahraman
   Scenario: Kullanici kahramani maceraya gönderir
     Given kullanici kahramani secer
     And birinci itemi kullanir
+
+@SaklanmaSavas
+  Scenario: Kullanici saldiri esnasinda kahramani savastirir
+    Given kullanici kahramani secer
+    And saldiri esnasinda savas
+    And degisiklikleri kaydeder
+
+@SavasmaSaklan
+  Scenario: Kullanici saldiri esnasinda kahramani saklar
+    Given kullanici kahramani secer
+    And saldiri esnasinda saklan
+    And degisiklikleri kaydeder
