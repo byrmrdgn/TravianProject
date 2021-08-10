@@ -19,6 +19,15 @@ public class KöyMerkeziPage {
     @FindBy(xpath = "//div[@id='villageContent']//div//a")
     public List <WebElement> köyiciBinaAlanlari;
 
+    @FindBy(xpath = "//a[@class='tabItem infrastructure active']")
+    public WebElement altYapiKur;
+
+    @FindBy(xpath = "//a[@class='tabItem military normal']")
+    public WebElement askeriYapiKur;
+
+    @FindBy(xpath = "//a[@class='tabItem resources normal']")
+    public WebElement hammaddeYapisiKur;
+
     @FindBy(xpath = "(//div[@id='villageContent']/div/a)[1]")
     public WebElement siginakAlani;
 
@@ -53,7 +62,7 @@ public class KöyMerkeziPage {
     public WebElement insaAlani11;
 
     @FindBy(xpath = "(//div[@id='villageContent']/div/a)[12]")
-    public WebElement insaAlani12;
+    public WebElement kislaAlani;
 
     @FindBy(xpath = "(//div[@id='villageContent']/div/a)[13]")
     public WebElement insaAlani13;

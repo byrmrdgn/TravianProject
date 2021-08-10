@@ -64,4 +64,14 @@ public class KöyMerkeziStepDef {
         myMethods.binaIcinAlanSec(köyMerkeziPage.merkezBinasi);
     }
 
+    @Then("kisla kurmak icin alan secer")
+    public void kisla_kurmak_icin_alan_secer() {
+        myMethods.binaIcinAlanSec(köyMerkeziPage.kislaAlani);
+    }
+
+    @Then("askeri yapi kurmak icin askeri butona tiklar")
+    public void askeri_yapi_kurmak_icin_askeri_butona_tiklar() {
+        köyMerkeziPage.askeriYapiKur.click();
+    }
+
 }

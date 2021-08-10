@@ -56,3 +56,10 @@ Background: TC_001 Travian sayfasina gidis
     And Kullanici Köy Merkezi linkine tiklar
     And merkez binasina giris yapar
     And ve binayi gelistirir
+
+@KislaKur
+  Scenario: Kullanici Köyune Kisla Kurar
+    And Kullanici Köy Merkezi linkine tiklar
+    And kisla kurmak icin alan secer
+    And askeri yapi kurmak icin askeri butona tiklar
+    And ve binayi insa eder
