@@ -50,4 +50,10 @@ public class KahramanStepDef {
     public void degisiklikleri_kaydeder() {
         kahramanPage.kahramandakiDegisiklikleriKaydet.click();
     }
+
+    @Given("saglik seviyesini alir")
+    public void saglik_seviyesini_alir() {
+        String saglikSeviyesi=kahramanPage.saglikSeviyesi.getText();
+        System.out.println("Kahramanin maceraya cikarken sahip oldugu Saglik seviyesi = "+saglikSeviyesi);
+    }
 }

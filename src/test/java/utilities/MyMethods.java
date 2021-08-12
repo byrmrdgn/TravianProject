@@ -222,14 +222,16 @@ public class MyMethods {
             int kaynak3 = Integer.parseInt(element2.getText());
             int kaynak4 = Integer.parseInt(element3.getText());
 
-            if (kaynak1 <= kaynak2 || kaynak1 <= kaynak3 || kaynak1 <= kaynak4) {
+            if (kaynak1 < kaynak2 || kaynak1 < kaynak3 || kaynak1 < kaynak4) {
                 actions.moveToElement(element).click().perform();
-            } else if (kaynak2 <= kaynak1 || kaynak2 <= kaynak3 || kaynak2 <= kaynak4) {
+            } else if (kaynak2 < kaynak1 || kaynak2 < kaynak3 || kaynak2 < kaynak4) {
                 actions.moveToElement(element1).click().perform();
-            } else if (kaynak3 <= kaynak1 || kaynak3 <= kaynak2 || kaynak3 <= kaynak4) {
+            } else if (kaynak3 < kaynak1 || kaynak3 < kaynak2 || kaynak3 < kaynak4) {
                 actions.moveToElement(element2).click().perform();
-            } else if (kaynak4 <= kaynak1 || kaynak4 <= kaynak2 || kaynak4 <= kaynak3) {
+            } else if (kaynak4 < kaynak1 || kaynak4 < kaynak2 || kaynak4 < kaynak3) {
                 actions.moveToElement(element3).click().perform();
+            }else{
+                actions.moveToElement(element).click().perform();
             }
         }
     }
@@ -268,18 +270,20 @@ public class MyMethods {
             int kaynak5 = Integer.parseInt(element4.getText());
             int kaynak6 = Integer.parseInt(element5.getText());
 
-            if (kaynak1 <= kaynak2 || kaynak1 <= kaynak3 || kaynak1 <= kaynak4 || kaynak1 <= kaynak5 || kaynak1 <= kaynak6) {
+            if (kaynak1 < kaynak2 || kaynak1 < kaynak3 || kaynak1 < kaynak4 || kaynak1 < kaynak5 || kaynak1 < kaynak6) {
                 actions.moveToElement(element).click().perform();
-            } else if (kaynak2 <= kaynak1 || kaynak2 <= kaynak3 || kaynak2 <= kaynak4 || kaynak2 <= kaynak5 || kaynak2 <= kaynak6) {
+            } else if (kaynak2 < kaynak1 || kaynak2 < kaynak3 || kaynak2 < kaynak4 || kaynak2 < kaynak5 || kaynak2 < kaynak6) {
                 actions.moveToElement(element1).click().perform();
-            } else if (kaynak3 <= kaynak1 || kaynak3 <= kaynak2 || kaynak3 <= kaynak4 || kaynak3 <= kaynak5 || kaynak3 <= kaynak6) {
+            } else if (kaynak3 < kaynak1 || kaynak3 < kaynak2 || kaynak3 < kaynak4 || kaynak3 < kaynak5 || kaynak3 < kaynak6) {
                 actions.moveToElement(element2).click().perform();
-            } else if (kaynak4 <= kaynak1 || kaynak4 <= kaynak2 || kaynak4 <= kaynak3 || kaynak4 <= kaynak5 || kaynak4 <= kaynak6) {
+            } else if (kaynak4 < kaynak1 || kaynak4 < kaynak2 || kaynak4 < kaynak3 || kaynak4 < kaynak5 || kaynak4 < kaynak6) {
                 actions.moveToElement(element3).click().perform();
-            } else if (kaynak5 <= kaynak1 || kaynak5 <= kaynak2 || kaynak5 <= kaynak4 || kaynak5 <= kaynak3 || kaynak5 <= kaynak6) {
-                actions.moveToElement(element2).click().perform();
-            } else if (kaynak6 <= kaynak1 || kaynak6 <= kaynak2 || kaynak6 <= kaynak3 || kaynak6 <= kaynak4 || kaynak6 <= kaynak5) {
-                actions.moveToElement(element3).click().perform();
+            } else if (kaynak5 < kaynak1 || kaynak5 < kaynak2 || kaynak5 < kaynak4 || kaynak5 < kaynak3 || kaynak5 < kaynak6) {
+                actions.moveToElement(element4).click().perform();
+            } else if (kaynak6 < kaynak1 || kaynak6 < kaynak2 || kaynak6 < kaynak3 || kaynak6 < kaynak4 || kaynak6 < kaynak5) {
+                actions.moveToElement(element5).click().perform();
+            }else{
+                actions.moveToElement(element).click().perform();
             }
         }
 

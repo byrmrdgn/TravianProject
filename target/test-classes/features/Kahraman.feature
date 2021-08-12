@@ -1,7 +1,7 @@
 @Kahraman
 Feature: Kahraman
 
-  Background: TC_001 Travian sayfasina gidis
+Background: TC_001 Travian sayfasina gidis
     Given kullanici "travian" adresine gider
     And giris yap linkkine tiklar
     And oynadigi serveri secer
@@ -13,6 +13,7 @@ Feature: Kahraman
 @MacerayaGit
   Scenario: Kullanici kahramani maceraya gönderir
     Given kullanici kahramani secer
+    And saglik seviyesini alir
     And macera butonuna tiklar
     And macerayi baslatir
     And ve macerayi onaylar
@@ -33,3 +34,8 @@ Feature: Kahraman
     Given kullanici kahramani secer
     And saldiri esnasinda saklan
     And degisiklikleri kaydeder
+
+@saglikSeviyesiniAl
+  Scenario: Kullanici kahramaninin saglik seviyesini alir
+    Given kullanici kahramani secer
+    And saglik seviyesini alir

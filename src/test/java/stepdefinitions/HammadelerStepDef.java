@@ -24,34 +24,7 @@ public class HammadelerStepDef {
     @Given("kullanici ormani gelistirmek icin alan secer")
     public void kullanici_ormani_gelistirmek_icin_alan_secer() {
 
-        if (hammadelerPage.ormanAlani1.getText().equals("")){
-            myMethods.wait(5);
-            actions.moveToElement(hammadelerPage.ormanAlani1).click().perform();
-            //myMethods.binaIcinAlanSec(hammadelerPage.ormanAlani1);
-        }else if (hammadelerPage.ormanAlani2.getText().equals("")){
-            myMethods.wait(5);
-            actions.moveToElement(hammadelerPage.ormanAlani2).click().perform();
-        }else if (hammadelerPage.ormanAlani3.getText().equals("")){
-            myMethods.wait(5);
-            actions.moveToElement(hammadelerPage.ormanAlani3).click().perform();
-        }else if (hammadelerPage.ormanAlani4.getText().equals("")){
-            myMethods.wait(5);
-            actions.moveToElement(hammadelerPage.ormanAlani4).click().perform();
-        }
-        int ormanAlani1=Integer.parseInt(hammadelerPage.ormanAlani1.getText());
-        int ormanAlani2=Integer.parseInt(hammadelerPage.ormanAlani2.getText());
-        int ormanAlani3=Integer.parseInt(hammadelerPage.ormanAlani3.getText());
-        int ormanAlani4=Integer.parseInt(hammadelerPage.ormanAlani4.getText());
-
-        if (ormanAlani1<ormanAlani2||ormanAlani1<ormanAlani3||ormanAlani1<ormanAlani4){
-            actions.moveToElement(hammadelerPage.ormanAlani1).click().perform();
-        }else if (ormanAlani2<ormanAlani1||ormanAlani2<ormanAlani3||ormanAlani2<ormanAlani4){
-            actions.moveToElement(hammadelerPage.ormanAlani2).click().perform();
-        }else if (ormanAlani3<ormanAlani1||ormanAlani3<ormanAlani2||ormanAlani3<ormanAlani4){
-            actions.moveToElement(hammadelerPage.ormanAlani3).click().perform();
-        }else if (ormanAlani4<ormanAlani1||ormanAlani4<ormanAlani2||ormanAlani4<ormanAlani3){
-            actions.moveToElement(hammadelerPage.ormanAlani4).click().perform();
-        }
+       myMethods.hammaddeGelistir(hammadelerPage.ormanAlani1,hammadelerPage.ormanAlani2,hammadelerPage.ormanAlani3,hammadelerPage.ormanAlani4);
     }
 
     @Given("ve ormani gelistirir")

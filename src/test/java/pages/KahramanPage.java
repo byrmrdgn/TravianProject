@@ -59,6 +59,33 @@ public class KahramanPage {
     @FindBy(id = "saveHeroAttributes")
     public WebElement kahramandakiDegisiklikleriKaydet;
 
+    @FindBy(xpath = "//tr[@id='attributepower']/td[4]")
+    public WebElement kahramaninSavasGucunuAzalt;
+
+    @FindBy(xpath = "//tr[@id='attributepower']/td[6]")
+    public WebElement kahramaninSavasGucunuArttir;
+
+    @FindBy(xpath = "//tr[@id='attributeoffBonus']/td[4]")
+    public WebElement kahramaninSaldiriBonusunuAzalt;
+
+    @FindBy(xpath = "//tr[@id='attributeoffBonus']/td[6]")
+    public WebElement kahramaninSaldiriBonusunuArttir;
+
+    @FindBy(xpath = "//tr[@id='attributedefBonus']/td[4]")
+    public WebElement kahramaninSavunmaBonusunuAzalt;
+
+    @FindBy(xpath = "//tr[@id='attributedefBonus']/td[6]")
+    public WebElement kahramaninSavunmaBonusunuArttir;
+
+    @FindBy(xpath = "//tr[@id='attributeproductionPoints']/td[4]")
+    public WebElement kahramaninHammaddeUretiminiAzalt;
+
+    @FindBy(xpath = "//tr[@id='attributeproductionPoints']/td[6]")
+    public WebElement kahramaninHammaddeUretiminiArttir;
+
+    @FindBy(xpath = "//span[@class='value']")
+    public WebElement saglikSeviyesi;
+
 
 
 
