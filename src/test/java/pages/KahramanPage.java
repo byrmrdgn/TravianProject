@@ -20,6 +20,63 @@ public class KahramanPage {
     @FindBy(xpath = "//div[@class='content  favor  favorKeyappearance']/a")
     public WebElement kahramanDuzenleyici;
 
+    @FindBy(id = "headProfile")
+    public WebElement kafaSekliSecenekleri;
+
+    @FindBy(id = "attribute_button_51")
+    public WebElement kafaSekliniSec;
+
+    @FindBy(id = "hairColor")
+    public WebElement sacRengiSecenekleri;
+
+    @FindBy(id = "attribute_button_1500")
+    public WebElement sacRenginiSec;
+
+    @FindBy(id = "hairStyle")
+    public WebElement sacSekliSecenekleri;
+
+    @FindBy(id = "attribute_button_1000")
+    public WebElement sacSekliniSec;
+
+    @FindBy(id = "ears")
+    public WebElement kulakSekliSecenekleri;
+
+    @FindBy(id = "attribute_button_2000")
+    public WebElement kulakSekliniSec;
+
+    @FindBy(id = "eyebrow")
+    public WebElement kasSekliSecenekleri;
+
+    @FindBy(id = "attribute_button_7000")
+    public WebElement kasSekliniSec;
+
+    @FindBy(id = "eyes")
+    public WebElement gözRengiSecenekleri;
+
+    @FindBy(id = "attribute_button_4004")
+    public WebElement gözRenginiSec;
+
+    @FindBy(id = "nose")
+    public WebElement burunSekliSecenekleri;
+
+    @FindBy(id = "attribute_button_3001")
+    public WebElement burunSekliniSec;
+
+    @FindBy(id = "mouth")
+    public WebElement agizSekliSecenekleri;
+
+    @FindBy(id = "attribute_button_6002")
+    public WebElement agizSekliniSec;
+
+    @FindBy(id = "beard")
+    public WebElement sakalSekliSecenekleri;
+
+    @FindBy(id = "attribute_button_5003")
+    public WebElement sakalSekliniSec;
+
+    @FindBy(id = "save")
+    public WebElement kahramaninFizikselDegisiklikleriKaydet;
+
     @FindBy(xpath = "//div[@class='content  favor  favorKeyadventures']/a")
     public WebElement kahramanMacera;
 

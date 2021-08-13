@@ -10,6 +10,30 @@ Background: TC_001 Travian sayfasina gidis
     And giris yap butonuna tiklar
     Then kullanici cerez uyarisini kabul eder
 
+@KahramaniDuzenle
+  Scenario: Kullanici Kahramani Duzenler
+    Given kullanici kahramani secer
+    And kahrmani duzenleyi secer
+    And kafa seklini secmek icin secenekelere bakar
+    And kafa seklini secer
+    And sac rengini secmek icin secenekelere bakar
+    And sac rengini secer
+    And sac seklini secmek icin secenekelere bakar
+    And sac seklini secer
+    And kulak seklini secmek icin secenekelere bakar
+    And kulak seklini secer
+    And kas seklini secmek icin secenekelere bakar
+    And kas seklini secer
+    And göz rengini secmek icin secenekelere bakar
+    And göz rengini secer
+    And burun seklini secmek icin secenekelere bakar
+    And burun seklini secer
+    And agiz seklini secmek icin secenekelere bakar
+    And agiz seklini secer
+    And sakal seklini secmek icin secenekelere bakar
+    And sakal seklini secer
+    And kahramanin fiziksel degisikliklerini kaydeder
+
 @MacerayaGit
   Scenario: Kullanici kahramani maceraya gönderir
     Given kullanici kahramani secer
@@ -40,10 +64,10 @@ Background: TC_001 Travian sayfasina gidis
     Given kullanici kahramani secer
     And saglik seviyesini alir
 
-@KahramaninSavunmaBonusunuFullArttir
-  Scenario: Kullanici Kahramanin savunma bonusunu tam puan arttirir.
+@KahramaninSaldiriBonusunuFullArttir
+  Scenario: Kullanici Kahramanin saldiri bonusunu tam puan arttirir.
     Given kullanici kahramani secer
-    And kahramanin savunma bonusunu arttirir
+    And kahramanin saldiri bonusunu arttirir
     And degisiklikleri kaydeder
 
 @ItemSec

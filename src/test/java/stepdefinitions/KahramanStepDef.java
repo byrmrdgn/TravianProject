@@ -58,8 +58,8 @@ public class KahramanStepDef {
         System.out.println("Kahramanin maceraya cikarken sahip oldugu Saglik seviyesi = "+saglikSeviyesi);
     }
 
-    @Given("kahramanin savunma bonusunu arttirir")
-    public void kahramanin_savunma_bonusunu_arttirir() {
+    @Given("kahramanin saldiri bonusunu arttirir")
+    public void kahramanin_saldiri_bonusunu_arttirir() {
         myMethods.kahramanÖzelliginiDegistir(kahramanPage.sahipOlunanPuanlar, kahramanPage.kahramaninSaldiriBonusunuArttir);
     }
 
@@ -74,5 +74,98 @@ public class KahramanStepDef {
         kahramanPage.itemiOnayla.click();
     }
 
+    @Given("kahrmani duzenleyi secer")
+    public void kahrmani_duzenleyi_secer() {
+        kahramanPage.kahramanDuzenleyici.click();
+    }
+
+    @Given("kafa seklini secmek icin secenekelere bakar")
+    public void kafa_seklini_secmek_icin_secenekelere_bakar() {
+        kahramanPage.kafaSekliSecenekleri.click();
+    }
+
+    @Given("kafa seklini secer")
+    public void kafa_seklini_secer() {
+        kahramanPage.kafaSekliniSec.click();
+    }
+
+    @Given("sac rengini secmek icin secenekelere bakar")
+    public void sac_rengini_secmek_icin_secenekelere_bakar() {
+        kahramanPage.sacRengiSecenekleri.click();
+    }
+
+    @Given("sac rengini secer")
+    public void sac_rengini_secer() {
+        kahramanPage.sacRenginiSec.click();
+    }
+
+    @Given("sac seklini secmek icin secenekelere bakar")
+    public void sac_seklini_secmek_icin_secenekelere_bakar() {
+        kahramanPage.sacSekliSecenekleri.click();
+    }
+
+    @Given("sac seklini secer")
+    public void sac_seklini_secer() {
+        kahramanPage.sacSekliniSec.click();
+    }
+
+    @Given("kulak seklini secmek icin secenekelere bakar")
+    public void kulak_seklini_secmek_icin_secenekelere_bakar() {
+        kahramanPage.kulakSekliSecenekleri.click();
+    }
+    @Given("kulak seklini secer")
+    public void kulak_seklini_secer() {
+        kahramanPage.kulakSekliniSec.click();
+    }
+
+
+    @Given("kas seklini secmek icin secenekelere bakar")
+    public void kas_seklini_secmek_icin_secenekelere_bakar() {
+        kahramanPage.kasSekliSecenekleri.click();
+    }
+    @Given("kas seklini secer")
+    public void kas_seklini_secer() {
+        kahramanPage.kasSekliniSec.click();
+    }
+
+    @Given("göz rengini secmek icin secenekelere bakar")
+    public void göz_rengini_secmek_icin_secenekelere_bakar() {
+        kahramanPage.gözRengiSecenekleri.click();
+    }
+    @Given("göz rengini secer")
+    public void göz_rengini_secer() {
+        kahramanPage.gözRenginiSec.click();
+    }
+
+    @Given("burun seklini secmek icin secenekelere bakar")
+    public void burun_seklini_secmek_icin_secenekelere_bakar() {
+        kahramanPage.burunSekliSecenekleri.click();
+    }
+    @Given("burun seklini secer")
+    public void burun_seklini_secer() {
+        kahramanPage.burunSekliniSec.click();
+    }
+
+    @Given("agiz seklini secmek icin secenekelere bakar")
+    public void agiz_seklini_secmek_icin_secenekelere_bakar() {
+        kahramanPage.agizSekliSecenekleri.click();
+    }
+    @Given("agiz seklini secer")
+    public void agiz_seklini_secer() {
+        kahramanPage.agizSekliniSec.click();
+    }
+
+    @Given("sakal seklini secmek icin secenekelere bakar")
+    public void sakal_seklini_secmek_icin_secenekelere_bakar() {
+        kahramanPage.sakalSekliSecenekleri.click();
+    }
+    @Given("sakal seklini secer")
+    public void sakal_seklini_secer() {
+        kahramanPage.sakalSekliniSec.click();
+    }
+    @Given("kahramanin fiziksel degisikliklerini kaydeder")
+    public void kahramanin_fiziksel_degisikliklerini_kaydeder() {
+        kahramanPage.kahramaninFizikselDegisiklikleriKaydet.click();
+    }
 
 }
