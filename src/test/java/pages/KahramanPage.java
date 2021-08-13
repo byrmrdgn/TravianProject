@@ -50,6 +50,12 @@ public class KahramanPage {
     @FindBy(id = "inventory_1")
     public WebElement itemKutusu1;
 
+    @FindBy(id = "inventory_7")
+    public WebElement itemKutusu7;
+
+    @FindBy(xpath = "//*[.='Tamam']")
+    public WebElement itemiOnayla;
+
     @FindBy(id = "attackBehaviourFight")
     public WebElement saldiriEsnasindaSavas;
 
@@ -85,6 +91,9 @@ public class KahramanPage {
 
     @FindBy(xpath = "//span[@class='value']")
     public WebElement saglikSeviyesi;
+
+    @FindBy(xpath = "//td[@id='availablePoints']")
+    public WebElement sahipOlunanPuanlar;
 
 
 

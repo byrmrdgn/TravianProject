@@ -79,4 +79,9 @@ public class KöyMerkeziStepDef {
         myMethods.binaIcinAlanSec(köyMerkeziPage.pazarAlani);
     }
 
+    @Then("kislaya giris yapar")
+    public void kislaya_giris_yapar() {
+        myMethods.binaIcinAlanSec(köyMerkeziPage.kislaAlani);
+    }
+
 }

@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import org.openqa.selenium.interactions.Actions;
 import pages.KahramanPage;
 import utilities.Driver;
@@ -56,4 +57,22 @@ public class KahramanStepDef {
         String saglikSeviyesi=kahramanPage.saglikSeviyesi.getText();
         System.out.println("Kahramanin maceraya cikarken sahip oldugu Saglik seviyesi = "+saglikSeviyesi);
     }
+
+    @Given("kahramanin savunma bonusunu arttirir")
+    public void kahramanin_savunma_bonusunu_arttirir() {
+        myMethods.kahramanÖzelliginiDegistir(kahramanPage.sahipOlunanPuanlar, kahramanPage.kahramaninSaldiriBonusunuArttir);
+    }
+
+    @Given("item ekler")
+    public void item_ekler() {
+        myMethods.itemSec(kahramanPage.itemKutusu7);
+    }
+
+    @Given("itemi onaylar")
+    public void itemi_onaylar() {
+        myMethods.wait(5);
+        kahramanPage.itemiOnayla.click();
+    }
+
+
 }

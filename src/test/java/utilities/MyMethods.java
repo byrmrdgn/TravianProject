@@ -289,4 +289,19 @@ public class MyMethods {
 
     }
 
+    public void kahramanÖzelliginiDegistir(WebElement element,WebElement element1){
+
+        String sahipOlunanPuanlar =element.getText();
+
+        int sonDeger=Integer.parseInt(String.valueOf(sahipOlunanPuanlar.charAt(2)));
+
+        for (int i=0;i<sonDeger;i++){
+            element1.click();
+        }
+    }
+
+    public void itemSec(WebElement element){
+        element.click();
+    }
+
 }

@@ -19,7 +19,7 @@ Background: TC_001 Travian sayfasina gidis
     And ve macerayi onaylar
 
 @1.itemiSec
-  Scenario: Kullanici kahramani maceraya gönderir
+  Scenario: Kullanici kahramana At alir
     Given kullanici kahramani secer
     And birinci itemi kullanir
 
@@ -39,3 +39,15 @@ Background: TC_001 Travian sayfasina gidis
   Scenario: Kullanici kahramaninin saglik seviyesini alir
     Given kullanici kahramani secer
     And saglik seviyesini alir
+
+@KahramaninSavunmaBonusunuFullArttir
+  Scenario: Kullanici Kahramanin savunma bonusunu tam puan arttirir.
+    Given kullanici kahramani secer
+    And kahramanin savunma bonusunu arttirir
+    And degisiklikleri kaydeder
+
+@ItemSec
+  Scenario: Kullanici kahramana item ekler
+  Given kullanici kahramani secer
+  And item ekler
+  And itemi onaylar
