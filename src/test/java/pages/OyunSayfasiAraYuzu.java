@@ -13,9 +13,6 @@ public class OyunSayfasiAraYuzu {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(className = "village resourceView")
-    public WebElement hammaddelerLinki;
-
     @FindBy(className = "map")
     public WebElement haritaLinki;
 

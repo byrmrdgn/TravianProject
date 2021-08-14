@@ -13,6 +13,9 @@ public class HammadelerPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    @FindBy(className = "village resourceView")
+    public WebElement hammaddelerLinki;
+
     @FindBy(xpath = "//div[@id='resourceFieldContainer']/a")
     public List <WebElement> hammaddeKaynaklari;
 
