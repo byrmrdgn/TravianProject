@@ -22,6 +22,9 @@ public class HammadelerPage {
     @FindBy(className = "titleInHeader")
     public WebElement hammaddeTurununBasligi;
 
+    @FindBy(xpath = "//div[@class='labelLayer']")
+    public List <WebElement> hammaddeSeviyeleri;
+
     @FindBy(xpath = "//div[@class='section1']//button")
     public WebElement buSeviyeyiGelistir;
 

@@ -1,9 +1,12 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.Given;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import pages.HammadelerPage;
 import utilities.Driver;
+import utilities.JSExecutor;
 import utilities.MyMethods;
 
 import java.util.ArrayList;
@@ -60,6 +63,25 @@ public class HammadelerStepDef {
         hammadelerPage.buSeviyeyiGelistir.click();
     }
 
+    @Given("kullanici hammadde seviyelerini yazdirir")
+    public void kullanici_hammadde_seviyelerini_yazdirir() {
 
+        List <Integer> list=new ArrayList();
+
+        for (int i=0;i<hammadelerPage.hammaddeSeviyeleri.size();i++){
+            list.add(Integer.parseInt(hammadelerPage.hammaddeSeviyeleri.get(i).getText()));
+        }
+
+        for (int i=0;i<hammadelerPage.hammaddeSeviyeleri.size();i++){
+            for (int j=0; j<list.size();j++){
+                if (list.get(j)==Integer.parseInt(hammadelerPage.hammaddeSeviyeleri.get(i).getText())){
+                    System.out.println("aaa");
+                    hammadelerPage.hammaddeSeviyeleri.get(i).click();
+                    break;
+                }
+            }
+        }
+        System.out.println(list);
+    }
 
 }
