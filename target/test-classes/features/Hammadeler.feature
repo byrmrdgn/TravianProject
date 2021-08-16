@@ -33,8 +33,3 @@ Feature: Hammadde Kaynaklari
   @hammaddeSeviyeleriniYazdir
   Scenario: Kullanici Hammadde Kaynalarinin seviyelerini yazdirir
     Given kullanici hammadde seviyelerini yazdirir
-
-  @harita
-  Scenario: Kullanici haritaya girer
-    Given kullanici harita linkine tiklar
-    And kullanici haritaya girer

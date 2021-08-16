@@ -66,6 +66,10 @@ public class HammadelerStepDef {
     @Given("kullanici hammadde seviyelerini yazdirir")
     public void kullanici_hammadde_seviyelerini_yazdirir() {
 
+
+        // bu kod uzerinde calisilacak, bu kodun amaci en az gelismis olan hammaddeyi gelistirmek.
+
+
         List <Integer> list=new ArrayList();
 
         for (int i=0;i<hammadelerPage.hammaddeSeviyeleri.size();i++){
@@ -74,14 +78,15 @@ public class HammadelerStepDef {
 
         for (int i=0;i<hammadelerPage.hammaddeSeviyeleri.size();i++){
             for (int j=0; j<list.size();j++){
-                if (list.get(j)==Integer.parseInt(hammadelerPage.hammaddeSeviyeleri.get(i).getText())){
-                    System.out.println("aaa");
-                    hammadelerPage.hammaddeSeviyeleri.get(i).click();
+                if (Integer.parseInt(hammadelerPage.hammaddeSeviyeleri.get(i).getText())>list.get(j)){
+                    hammadelerPage.hammaddeSeviyeleri.get(j).click();
+                    hammadelerPage.buSeviyeyiGelistir.click();
+                    //Driver.getDriver().navigate().back();
                     break;
                 }
             }
+            break;
         }
-        System.out.println(list);
     }
 
 }
