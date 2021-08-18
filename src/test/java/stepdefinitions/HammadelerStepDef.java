@@ -83,6 +83,10 @@ public class HammadelerStepDef {
                     hammadelerPage.buSeviyeyiGelistir.click();
                     //Driver.getDriver().navigate().back();
                     break;
+                }else{
+                    hammadelerPage.hammaddeSeviyeleri.get(i).click();
+                    hammadelerPage.buSeviyeyiGelistir.click();
+                    break;
                 }
             }
             break;

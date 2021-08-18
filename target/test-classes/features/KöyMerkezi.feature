@@ -82,3 +82,9 @@ Background: TC_001 Travian sayfasina gidis
     And akademi kurmak icin alan secer
     And askeri yapi kurmak icin askeri butona tiklar
     And ve binayi insa eder
+
+@AkademiyiGelistir
+  Scenario: Kullanici Akademiyi gelistirir
+    And Kullanici Köy Merkezi linkine tiklar
+    And akademiye giris yapar
+    And ve binayi gelistirir
