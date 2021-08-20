@@ -19,9 +19,6 @@ public class OyunSayfasiAraYuzu {
     @FindBy(xpath = "//a[@accesskey='4']")
     public WebElement istatistikLinki;
 
-    @FindBy(className = "reports")
-    public WebElement raporlarLinki;
-
     @FindBy(className = "messages")
     public WebElement mesajlarLinki;
 

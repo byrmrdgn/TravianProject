@@ -74,4 +74,4 @@ Background: TC_001 Travian sayfasina gidis
   Scenario: Kullanici kahramana item ekler
   Given kullanici kahramani secer
   And item ekler
-#  And itemi onaylar
+  And itemi onaylar
