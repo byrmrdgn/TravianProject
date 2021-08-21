@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class KahramanPage {
 
     public KahramanPage(){
@@ -152,7 +154,17 @@ public class KahramanPage {
     @FindBy(xpath = "//td[@id='availablePoints']")
     public WebElement sahipOlunanPuanlar;
 
+    @FindBy(xpath = "//button[@data-key='10']")
+    public WebElement sifaMerhemiLinki;
 
+    @FindBy(xpath = "//tr//td[6]")
+    public List<WebElement> teklifVer;
+
+    @FindBy(name = "maxBid")
+    public List <WebElement> teklifKutusu;
+
+    @FindBy(className = "submitBid")
+    public List <WebElement> teklifiOnayla;
 
 
 }

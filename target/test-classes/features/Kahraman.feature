@@ -75,3 +75,12 @@ Background: TC_001 Travian sayfasina gidis
   Given kullanici kahramani secer
   And item ekler
   And itemi onaylar
+
+@sifaMerhemineTeklifYap
+  Scenario: Kullanici acik arttirmaya katilir
+    Given kullanici kahramani secer
+    And acik arttirma linkine tiklar
+    And sifa merhemine tiklar
+    And teklfi ver butonuna tiklar ve teklif edecegi miktari girerek teklifi onaylar
+
+

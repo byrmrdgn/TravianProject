@@ -168,4 +168,30 @@ public class KahramanStepDef {
         kahramanPage.kahramaninFizikselDegisiklikleriKaydet.click();
     }
 
+    @Given("acik arttirma linkine tiklar")
+    public void acik_arttirma_linkine_tiklar() {
+        kahramanPage.acikArttirma.click();
+    }
+
+    @Given("sifa merhemine tiklar")
+    public void sifa_merhemine_tiklar() {
+        kahramanPage.sifaMerhemiLinki.click();
+    }
+
+    @Given("teklfi ver butonuna tiklar ve teklif edecegi miktari girer")
+    public void teklfi_ver_butonuna_tiklar_ve_teklif_edecegi_miktari_girer() {
+
+    }
+
+    @Given("teklfi ver butonuna tiklar ve teklif edecegi miktari girerek teklifi onaylar")
+    public void teklfi_ver_butonuna_tiklar_ve_teklif_edecegi_miktari_girerek_teklifi_onaylar() {
+        myMethods.wait(5);
+        for (int i=0;i<20;i++){
+            kahramanPage.teklifVer.get(i).click();
+            kahramanPage.teklifKutusu.get(i).sendKeys("100");
+            kahramanPage.teklifiOnayla.get(i).click();
+        }
+    }
+
+
 }
