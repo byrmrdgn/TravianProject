@@ -161,10 +161,16 @@ public class KahramanPage {
     public List<WebElement> teklifVer;
 
     @FindBy(name = "maxBid")
-    public List <WebElement> teklifKutusu;
+    public WebElement teklifKutusu;
 
     @FindBy(className = "submitBid")
-    public List <WebElement> teklifiOnayla;
+    public WebElement teklifiOnayla;
+
+    @FindBy(xpath = "//div[@class='value ajaxReplaceableSilverAmount']")
+    public WebElement kasadaOlanGumusMiktari;
+
+    @FindBy(xpath = "//td[@class='silver selected']")
+    public WebElement urununAnlikFiyati;
 
 
 }

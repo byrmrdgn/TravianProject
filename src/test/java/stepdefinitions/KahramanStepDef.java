@@ -178,19 +178,21 @@ public class KahramanStepDef {
         kahramanPage.sifaMerhemiLinki.click();
     }
 
-    @Given("teklfi ver butonuna tiklar ve teklif edecegi miktari girer")
-    public void teklfi_ver_butonuna_tiklar_ve_teklif_edecegi_miktari_girer() {
-
-    }
-
     @Given("teklfi ver butonuna tiklar ve teklif edecegi miktari girerek teklifi onaylar")
     public void teklfi_ver_butonuna_tiklar_ve_teklif_edecegi_miktari_girerek_teklifi_onaylar() {
         myMethods.wait(5);
         for (int i=0;i<20;i++){
             kahramanPage.teklifVer.get(i).click();
-            kahramanPage.teklifKutusu.get(i).sendKeys("100");
-            kahramanPage.teklifiOnayla.get(i).click();
+            System.out.println(kahramanPage.urununAnlikFiyati.getText());
+            kahramanPage.teklifKutusu.sendKeys("100");
+            kahramanPage.teklifiOnayla.click();
+            myMethods.wait(3);
+        // bu kodda kasada bulunan gumus miktarini alip, urunun aktif miktari ile karsilastiran kasadaki gumus miktari urunun fiyatindan fazla ise o urune +50 gumus ile
+        // teklif yapan yeni bir kod ekleyecegim.
+
+
         }
+
     }
 
 
