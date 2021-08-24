@@ -182,21 +182,21 @@ public class KahramanStepDef {
     public void teklfi_ver_butonuna_tiklar_ve_teklif_edecegi_miktari_girerek_teklifi_onaylar() {
         myMethods.wait(5);
 
-        ;
-
+        int num=0;
         int urununAnlikFiyati=0;
 
-
         for (int i=0;i<20;i++){
-            System.out.println(kahramanPage.kasadaOlanGumusMiktari.getText());
+
+            num=Integer.parseInt(kahramanPage.kasadaOlanGumusMiktari.getText().replaceAll("\\D", ""));
             kahramanPage.teklifVer.get(i).click();
 
             urununAnlikFiyati=Integer.parseInt(kahramanPage.urununAnlikFiyati.getText());
-            kahramanPage.teklifKutusu.sendKeys(urununAnlikFiyati+100+"");
 
-
-
-
+            if (urununAnlikFiyati<num){
+                kahramanPage.teklifKutusu.sendKeys(urununAnlikFiyati+50+"");
+            }else {
+                break;
+            }
 
             //kahramanPage.teklifiOnayla.click();
 

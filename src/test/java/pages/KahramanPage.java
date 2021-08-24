@@ -157,6 +157,24 @@ public class KahramanPage {
     @FindBy(xpath = "//button[@data-key='10']")
     public WebElement sifaMerhemiLinki;
 
+    @FindBy(xpath = "//button[@data-key='0']")
+    public WebElement migferLinki;
+
+    @FindBy(xpath = "//button[@data-key='1']")
+    public WebElement gövdeIcinKullanilanEsyaLinki;
+
+    @FindBy(xpath = "//button[@data-key='2']")
+    public WebElement solEldeKullanilanEsyaLinki;
+
+    @FindBy(xpath = "//button[@data-key='3']")
+    public WebElement sagEldeKullanilanEsyaLinki;
+
+    @FindBy(xpath = "//button[@data-key='4']")
+    public WebElement cizmeLinki;
+
+    @FindBy(xpath = "//button[@data-key='5']")
+    public WebElement atLinki;
+
     @FindBy(xpath = "//tr//td[6]")
     public List<WebElement> teklifVer;
 
