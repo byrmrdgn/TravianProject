@@ -94,4 +94,9 @@ public class KöyMerkeziStepDef {
         myMethods.binaIcinAlanSec(köyMerkeziPage.akademiAlani);
     }
 
+    @Then("zirh dökumhanesi kurmak icin alan secer")
+    public void zirh_dökumhanesi_kurmak_icin_alan_secer() {
+        myMethods.binaIcinAlanSec(köyMerkeziPage.zirhDökumhanesiAlani);
+    }
+
 }

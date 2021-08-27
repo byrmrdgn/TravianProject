@@ -88,3 +88,10 @@ Background: TC_001 Travian sayfasina gidis
     And Kullanici Köy Merkezi linkine tiklar
     And akademiye giris yapar
     And ve binayi gelistirir
+
+@ZirhDökumhanesiKur
+  Scenario: Kullanici Köyune Zirh Dkumhanesi Kurar
+    And Kullanici Köy Merkezi linkine tiklar
+    And zirh dökumhanesi kurmak icin alan secer
+    And askeri yapi kurmak icin askeri butona tiklar
+    And ve binayi insa eder

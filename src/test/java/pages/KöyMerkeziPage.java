@@ -59,7 +59,7 @@ public class KöyMerkeziPage {
     public WebElement insaAlani10;
 
     @FindBy(xpath = "(//div[@id='villageContent']/div/a)[11]")
-    public WebElement insaAlani11;
+    public WebElement zirhDökumhanesiAlani;
 
     @FindBy(xpath = "(//div[@id='villageContent']/div/a)[12]")
     public WebElement kislaAlani;
