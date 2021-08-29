@@ -190,5 +190,11 @@ public class KahramanPage {
     @FindBy(xpath = "//td[@class='silver selected']")
     public WebElement urununAnlikFiyati;
 
+    @FindBy(className = "notEnoughSilver")
+    public WebElement cokAzGumus;
+
+    @FindBy(xpath = "//img[@alt='sonraki sayfa']")
+    public WebElement sonrakiSayfa;
+
 
 }

@@ -182,29 +182,30 @@ public class KahramanStepDef {
     public void teklfi_ver_butonuna_tiklar_ve_teklif_edecegi_miktari_girerek_teklifi_onaylar() {
         myMethods.wait(5);
 
-        int num=0;
+        int kasadakiGumusMiktari=0;
         int urununAnlikFiyati=0;
 
-        for (int i=0;i<20;i++){
+            for (int i = 0; i < 20; i++) {
+                kasadakiGumusMiktari = Integer.parseInt(kahramanPage.kasadaOlanGumusMiktari.getText().replaceAll("\\D", ""));
 
-            num=Integer.parseInt(kahramanPage.kasadaOlanGumusMiktari.getText().replaceAll("\\D", ""));
-            kahramanPage.teklifVer.get(i).click();
+                if (kahramanPage.teklifVer.get(i).getText().equals("çok az gümüş")) {
+                    i++;
+                    kahramanPage.teklifVer.get(i).click();
+                    urununAnlikFiyati = Integer.parseInt(kahramanPage.urununAnlikFiyati.getText());
+                    kahramanPage.teklifKutusu.sendKeys(urununAnlikFiyati + 50 + "");
+                } else {
+                    kahramanPage.teklifVer.get(i).click();
+                    urununAnlikFiyati = Integer.parseInt(kahramanPage.urununAnlikFiyati.getText());
+                    kahramanPage.teklifKutusu.sendKeys(urununAnlikFiyati + 50 + "");
+                }
 
-            urununAnlikFiyati=Integer.parseInt(kahramanPage.urununAnlikFiyati.getText());
 
-            if (urununAnlikFiyati<num){
-                kahramanPage.teklifKutusu.sendKeys(urununAnlikFiyati+50+"");
-            }else {
-                break;
-            }
+                //kahramanPage.teklifiOnayla.click();
 
-            //kahramanPage.teklifiOnayla.click();
+                myMethods.wait(3);
 
-            myMethods.wait(3);
-
-        // bu kodda kasada bulunan gumus miktarini alip, urunun aktif miktari ile karsilastiran kasadaki gumus miktari urunun fiyatindan fazla ise o urune +50 gumus ile
-        // teklif yapan yeni bir kod ekleyecegim.
-
+                // bu kodda kasada bulunan gumus miktarini alip, urunun aktif miktari ile karsilastiran kasadaki gumus miktari urunun fiyatindan fazla ise o urune +50 gumus ile
+                // teklif yapan yeni bir kod ekleyecegim.
 
         }
 
