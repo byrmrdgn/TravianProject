@@ -90,8 +90,14 @@ Background: TC_001 Travian sayfasina gidis
     And ve binayi gelistirir
 
 @ZirhDökumhanesiKur
-  Scenario: Kullanici Köyune Zirh Dkumhanesi Kurar
+  Scenario: Kullanici Köyune Zirh Dökumhanesi Kurar
     And Kullanici Köy Merkezi linkine tiklar
     And zirh dökumhanesi kurmak icin alan secer
     And askeri yapi kurmak icin askeri butona tiklar
     And ve binayi insa eder
+
+@ZirhDökumhanesiniGelistir
+  Scenario: Kullanici Zirh Dökumhanesini gelistirir
+    And Kullanici Köy Merkezi linkine tiklar
+    And zirh dkumhanesine giris yapar
+    And ve binayi gelistirir
