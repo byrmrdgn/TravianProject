@@ -51,3 +51,10 @@
     Scenario: TC_XXX kullanici bildirimler sayfasindaki cevre linkini kontrol eder
       Given kullanici bildirimler linkini tiklar
       And cevre linkini tiklar ve raporlari göruntuler
+
+    @HepsiLinkindekiMesajlariSil
+    Scenario: TC_XXX kullanici bildirimler sayfasindaki hepsi linkindeki mesajlari siler
+      Given kullanici bildirimler linkini tiklar
+      And hepsi linkini tiklar ve raporlari göruntuler
+      And tumunu secer
+      And sectigi mesajlari siler

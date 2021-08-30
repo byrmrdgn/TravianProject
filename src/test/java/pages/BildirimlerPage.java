@@ -37,4 +37,7 @@ public class BildirimlerPage {
 
     @FindBy(id = "markAll")
     public WebElement bildirimlerTumunuSecKutusu;
+
+    @FindBy(xpath = "//button[@value='delete']")
+    public WebElement silButonu;
 }

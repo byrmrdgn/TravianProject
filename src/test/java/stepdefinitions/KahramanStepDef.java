@@ -7,6 +7,9 @@ import pages.KahramanPage;
 import utilities.Driver;
 import utilities.MyMethods;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class KahramanStepDef {
 
     KahramanPage kahramanPage=new KahramanPage();
@@ -185,29 +188,59 @@ public class KahramanStepDef {
         int kasadakiGumusMiktari=0;
         int urununAnlikFiyati=0;
 
-            for (int i = 0; i < 20; i++) {
-                kasadakiGumusMiktari = Integer.parseInt(kahramanPage.kasadaOlanGumusMiktari.getText().replaceAll("\\D", ""));
+        List<String> list=new ArrayList<>();
 
-                if (kahramanPage.teklifVer.get(i).getText().equals("çok az gümüş")) {
-                    i++;
-                    kahramanPage.teklifVer.get(i).click();
-                    urununAnlikFiyati = Integer.parseInt(kahramanPage.urununAnlikFiyati.getText());
-                    kahramanPage.teklifKutusu.sendKeys(urununAnlikFiyati + 50 + "");
-                } else {
-                    kahramanPage.teklifVer.get(i).click();
-                    urununAnlikFiyati = Integer.parseInt(kahramanPage.urununAnlikFiyati.getText());
-                    kahramanPage.teklifKutusu.sendKeys(urununAnlikFiyati + 50 + "");
-                }
-
-
-                //kahramanPage.teklifiOnayla.click();
-
-                myMethods.wait(3);
-
-                // bu kodda kasada bulunan gumus miktarini alip, urunun aktif miktari ile karsilastiran kasadaki gumus miktari urunun fiyatindan fazla ise o urune +50 gumus ile
-                // teklif yapan yeni bir kod ekleyecegim.
-
+        for (int a=0;a<20;a++){
+            list.add(kahramanPage.teklifVer.get(a).getText());
         }
+
+        System.out.println(list);
+
+        for (int i=0;i<20;i++){
+            kasadakiGumusMiktari = Integer.parseInt(kahramanPage.kasadaOlanGumusMiktari.getText().replaceAll("\\D", ""));
+            System.out.println("Kasadaki miktar : "+kasadakiGumusMiktari);
+            if (list.get(i).equals("Teklif ver")){
+                kahramanPage.teklifVer.get(i).click();
+                urununAnlikFiyati = Integer.parseInt(kahramanPage.urununAnlikFiyati.getText());
+                kahramanPage.teklifKutusu.sendKeys(urununAnlikFiyati + 1 + "");
+                System.out.println(i+"Teklif ver");
+                kahramanPage.teklifiOnayla.click();
+                myMethods.wait(3);
+            }else if (list.get(i).equals("Değiştir")){
+                kahramanPage.teklifVer.get(i).click();
+                kahramanPage.teklifiOnayla.click();
+                myMethods.wait(3);
+                System.out.println(i+"Degisim");
+            }
+            if (i==19){
+                i=0;
+            }
+        }
+
+        //******************************************************
+//            for (int i = 0; i < 20; i++) {
+//                kasadakiGumusMiktari = Integer.parseInt(kahramanPage.kasadaOlanGumusMiktari.getText().replaceAll("\\D", ""));
+//
+//                if (kahramanPage.teklifVer.get(i).getText().equals("çok az gümüş")) {
+//                    i++;
+//                    kahramanPage.teklifVer.get(i).click();
+//                    urununAnlikFiyati = Integer.parseInt(kahramanPage.urununAnlikFiyati.getText());
+//                    kahramanPage.teklifKutusu.sendKeys(urununAnlikFiyati + 50 + "");
+//                } else {
+//                    kahramanPage.teklifVer.get(i).click();
+//                    urununAnlikFiyati = Integer.parseInt(kahramanPage.urununAnlikFiyati.getText());
+//                    kahramanPage.teklifKutusu.sendKeys(urununAnlikFiyati + 50 + "");
+//                }
+//
+//
+//                //kahramanPage.teklifiOnayla.click();
+//
+//                myMethods.wait(3);
+//
+//                // bu kodda kasada bulunan gumus miktarini alip, urunun aktif miktari ile karsilastiran kasadaki gumus miktari urunun fiyatindan fazla ise o urune +50 gumus ile
+//                // teklif yapan yeni bir kod ekleyecegim.
+//
+//        }
 
     }
 

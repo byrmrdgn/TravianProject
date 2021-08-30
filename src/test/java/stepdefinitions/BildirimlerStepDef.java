@@ -58,4 +58,9 @@ public class BildirimlerStepDef {
     public void cevre_linkini_tiklar_ve_raporlari_göruntuler() {
         bildirimlerPage.cevreBildirimlerininLinki.click();
     }
+
+    @Given("sectigi mesajlari siler")
+    public void sectigi_mesajlari_siler() {
+        bildirimlerPage.silButonu.click();
+    }
 }
