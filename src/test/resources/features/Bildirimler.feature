@@ -56,5 +56,5 @@
     Scenario: TC_XXX kullanici bildirimler sayfasindaki hepsi linkindeki mesajlari siler
       Given kullanici bildirimler linkini tiklar
       And hepsi linkini tiklar ve raporlari göruntuler
-      And tumunu secer
-      And sectigi mesajlari siler
+
+      And tumunu secerek mesajlari siler

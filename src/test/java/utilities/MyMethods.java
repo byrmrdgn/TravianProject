@@ -304,4 +304,12 @@ public class MyMethods {
         element.click();
     }
 
+    public void hepsiniSil(WebElement element, WebElement element1, WebElement element2){
+        int sonSayfaSayisi=Integer.parseInt(element.getText());
+        for (int i=0;i<sonSayfaSayisi;i++){
+            element1.click();
+            element2.click();
+        }
+    }
+
 }

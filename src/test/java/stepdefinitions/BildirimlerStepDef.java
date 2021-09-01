@@ -59,8 +59,8 @@ public class BildirimlerStepDef {
         bildirimlerPage.cevreBildirimlerininLinki.click();
     }
 
-    @Given("sectigi mesajlari siler")
-    public void sectigi_mesajlari_siler() {
-        bildirimlerPage.silButonu.click();
+    @Given("tumunu secerek mesajlari siler")
+    public void tumunu_secerek_mesajlari_siler() {
+        myMethods.hepsiniSil(bildirimlerPage.bildirimlerSonSayfa, bildirimlerPage.bildirimlerTumunuSecKutusu, bildirimlerPage.silButonu);
     }
 }

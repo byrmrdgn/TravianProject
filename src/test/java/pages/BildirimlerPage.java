@@ -1,5 +1,6 @@
 package pages;
 
+import org.apache.commons.compress.archivers.zip.X000A_NTFS;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -40,4 +41,7 @@ public class BildirimlerPage {
 
     @FindBy(xpath = "//button[@value='delete']")
     public WebElement silButonu;
+
+    @FindBy(xpath = "(//a[@class='number'])[2]")
+    public WebElement bildirimlerSonSayfa;
 }
