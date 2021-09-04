@@ -61,7 +61,6 @@ public class US_01_IlkSayfaninGörunurlugu {
         myMethods.linkiTiklaGeriDön(page.oyunDrpdwnÇarpışmaLinki);
         myMethods.urlDogrula(ConfigurationReader.getProperty("carpisma_url"));
         myMethods.elementeGit(page.oyunDropdown);
-
     }
 
     @Given("Gec oyun linkine tiklar ve geri döner")
@@ -172,7 +171,6 @@ public class US_01_IlkSayfaninGörunurlugu {
     public void sayfanin_altindaki_youtube_linkine_tiklar() {
         page.youTubeLinki.click();
         myMethods.windowsHandleAl(ConfigurationReader.getProperty("travian_youtube_linki"));
-
     }
 
     @Given("sayfanin altindaki destek linkine tiklar ve geri döner")
