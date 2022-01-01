@@ -51,7 +51,7 @@ public class MyMethods {
         actions.moveToElement(element).perform();
     }
 
-E    public void windowsHandleAl(String string) {
+   public void windowsHandleAl(String string) {
 
         Set<String> tumPencereler = Driver.getDriver().getWindowHandles();
     /*

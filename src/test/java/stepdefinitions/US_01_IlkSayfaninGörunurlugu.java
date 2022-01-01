@@ -188,3 +188,6 @@ public class US_01_IlkSayfaninGörunurlugu {
         myMethods.linkiTiklaGeriDön(page.sayfaAltiOyunKurallariLinki);
     }
 }
+
+
+// Bu sayfada gincellenme yapilmali
