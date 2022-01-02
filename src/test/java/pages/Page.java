@@ -5,7 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-import java.security.cert.X509Certificate;
 import java.util.List;
 
 public class Page {
@@ -54,8 +53,17 @@ public class Page {
     @FindBy(partialLinkText = "TV reklamları")
     public WebElement medyaDrpdwnTVreklamlarıLinki;
 
-    @FindBy(xpath = "(//a[@target='_blank'])[1]")
+    @FindBy(xpath = "(//*[.='Community'])")
+    public WebElement discordDrpdwn;
+
+    @FindBy(partialLinkText = "Blog")
+    public WebElement blogLinki;
+
+    @FindBy(partialLinkText = "Discord")
     public WebElement discordLinki;
+
+    @FindBy(partialLinkText = "Calendar")
+    public WebElement calenderLinki;
 
     @FindBy(xpath = "(//img)[4]")
     public WebElement travianLogo;

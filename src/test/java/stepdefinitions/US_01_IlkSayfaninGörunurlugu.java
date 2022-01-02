@@ -2,7 +2,8 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import pages.Page;
 import utilities.ConfigurationReader;
@@ -93,11 +94,28 @@ public class US_01_IlkSayfaninGörunurlugu {
         myMethods.urlDogrula(ConfigurationReader.getProperty("tv_reklamlari_url"));
     }
 
-    @Given("discord linkine tiklar ve geri döner")
-    public void discord_linkine_tiklar_ve_geri_döner() {
-       page.discordLinki.click();
-       myMethods.windowsHandleAl(ConfigurationReader.getProperty("discord_url"));
-     }
+    @Given("discord dropdownuna gider")
+    public void discord_dropdownuna_gider() {
+        myMethods.elementeGit(page.discordDrpdwn);
+    }
+    @Given("blog linkine tiklar")
+    public void blog_linkine() {
+       page.blogLinki.click();
+       myMethods.windowsHandleAl(ConfigurationReader.getProperty("discord_blog_url"));
+       
+    }
+
+    @Given("discord linkine tiklar")
+    public void discord_linkine_tiklar() {
+        page.discordDrpdwn.click();
+        myMethods.windowsHandleAl(ConfigurationReader.getProperty("discord_blog_url"));
+    }
+
+    @Given("calender linkine tiklar ve geri döner")
+    public void calender_linkine_tiklar_ve_geri_döner() {
+    page.calenderLinki.click();
+    myMethods.windowsHandleAl(ConfigurationReader.getProperty(""));
+    }
 
     @Given("travian logosunun görunurlugunu test eder")
     public void travian_logosunun_görunurlugunu_test_eder() {
@@ -190,4 +208,5 @@ public class US_01_IlkSayfaninGörunurlugu {
 }
 
 
-// Bu sayfada gincellenme yapilmali
+// Bu sayfada discord linkinde islemler yapilacak.
+// bu islemler acilan yeni pencerelrin kapatilmasi ve diger methodlara gecilemsi

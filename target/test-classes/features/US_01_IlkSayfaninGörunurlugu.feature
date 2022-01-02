@@ -24,8 +24,11 @@ Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
     And tv reklamlari linkine tiklar ve geri döner
 
   @discordlinki
-  Scenario: TC_005 Kullanici discord linkini kontrol eder
-    Given discord linkine tiklar ve geri döner
+  Scenario: TC_005 Kullanici discord icindeki linkleri kontrol eder
+    Given discord dropdownuna gider
+    And blog linkine tiklar
+    And discord linkine tiklar
+    And calender linkine tiklar
 
   @logo
   Scenario: TC_006 Kullanici logoyu görur
