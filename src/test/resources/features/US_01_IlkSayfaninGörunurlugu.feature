@@ -1,6 +1,6 @@
 @US_01_sayfaGörunurlugu
 Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
-
+# sayfa komple gözden gecirilmeli.
   Background: TC_001 Travian sayfasina gidis
       Given kullanici "travian" adresine gider
 
