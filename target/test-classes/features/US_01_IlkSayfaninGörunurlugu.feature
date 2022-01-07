@@ -1,6 +1,6 @@
 @US_01_sayfaGörunurlugu
 Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
-
+# sayfa komple gözden gecirilmeli.
   Background: TC_001 Travian sayfasina gidis
       Given kullanici "travian" adresine gider
 
@@ -39,9 +39,9 @@ Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
     Given dil secenekleri linkini tiklar
     And acilan sayfadan dilleri secer
 
-  @haberlerLinki
-  Scenario: TC_008 Kullanici haberler linkini kontrol eder
-    Given haberler linkine tiklar ve geri döner
+  #@haberlerLinki
+  #Scenario: TC_008 Kullanici haberler linkini kontrol eder
+   # Given haberler linkine tiklar ve geri döner
 
   @buyukYaziGörunurMu
   Scenario: TC_009 Kullanici buyuk yazinin varligini kontrol eder
