@@ -61,7 +61,9 @@ public class MyMethods {
     */
         String ikinciSayfaHandle = (String) (tumPencereler.toArray())[tumPencereler.size() - 1];
         Driver.getDriver().switchTo().window(ikinciSayfaHandle);
+        Driver.getDriver().close();
 
+        /*
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -69,6 +71,8 @@ public class MyMethods {
         }
         String url = Driver.getDriver().getCurrentUrl();
         Assert.assertEquals(string, url);
+        */
+
     }
 
     public void dilSec() {

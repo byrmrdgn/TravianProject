@@ -104,10 +104,10 @@ public class Page {
     @FindBy(xpath = "(//a[@title='Hemen oyna'])[3]")
     public WebElement sayfaAltiHemenOyna;
 
-    @FindBy (xpath = "(//a[@target='_blank'])[8]")
+    @FindBy (xpath = "//*[.='Facebook']")
     public WebElement facebookLinki;
 
-    @FindBy (xpath = "(//a[@target='_blank'])[9]")
+    @FindBy (xpath = "(//*[.='Discord'])[3]")
     public WebElement sayfaAltiDiscordLinki;
 
     @FindBy (xpath = "(//a[@target='_blank'])[10]")
