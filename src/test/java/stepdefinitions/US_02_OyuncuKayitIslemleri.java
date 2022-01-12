@@ -2,9 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.sl.In;
-import org.junit.Assert;
-import pages.Page;
+import pages.US_01_IlkSayfaninGörunurluguPage;
 import utilities.ConfigurationReader;
 import utilities.MyMethods;
 
@@ -15,7 +13,7 @@ import java.util.List;
 
 public class US_02_OyuncuKayitIslemleri {
 
-    Page page=new Page();
+    US_01_IlkSayfaninGörunurluguPage page=new US_01_IlkSayfaninGörunurluguPage();
     MyMethods myMethods=new MyMethods();
 
     @Given("hemen oyna linkine tiklar")

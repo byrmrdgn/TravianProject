@@ -3,7 +3,7 @@ package utilities;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import pages.Page;
+import pages.US_01_IlkSayfaninGörunurluguPage;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,11 +13,11 @@ import java.util.Set;
 public class MyMethods {
 
     Actions actions = new Actions(Driver.getDriver());
-    Page page = new Page();
+    US_01_IlkSayfaninGörunurluguPage page = new US_01_IlkSayfaninGörunurluguPage();
     static String url = "";
 
     public void acceptAll() {
-        Page page = new Page();
+        US_01_IlkSayfaninGörunurluguPage page = new US_01_IlkSayfaninGörunurluguPage();
         try {
             if (page.acceptAll.isDisplayed()) {
                 page.acceptAll.click();
@@ -50,30 +50,13 @@ public class MyMethods {
     public void elementeGit(WebElement element) {
         actions.moveToElement(element).perform();
     }
-
-   public void windowsHandleAl(String string) {
+/*
+   public void windowsHandleAl() {
 
         Set<String> tumPencereler = Driver.getDriver().getWindowHandles();
-    /*
-        for (String w:tumPencereler){
-            System.out.println(w);
-        }
-    */
-        String ikinciSayfaHandle = (String) (tumPencereler.toArray())[tumPencereler.size() - 1];
-        Driver.getDriver().switchTo().window(ikinciSayfaHandle);
-        Driver.getDriver().close();
-
-        /*
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        String url = Driver.getDriver().getCurrentUrl();
-        Assert.assertEquals(string, url);
-        */
-
-    }
+        String handles = (String) (tumPencereler.toArray())[tumPencereler.size()-1];
+        Driver.getDriver().switchTo().window(handles);
+    }*/
 
     public void dilSec() {
 

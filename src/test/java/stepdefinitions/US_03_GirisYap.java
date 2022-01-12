@@ -2,16 +2,13 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import pages.Page;
+import pages.US_01_IlkSayfaninGörunurluguPage;
 import utilities.ConfigurationReader;
-import utilities.JSExecutor;
 import utilities.MyMethods;
-
-import java.util.Collections;
 
 public class US_03_GirisYap {
 
-    Page page=new Page();
+    US_01_IlkSayfaninGörunurluguPage page=new US_01_IlkSayfaninGörunurluguPage();
     MyMethods myMethods=new MyMethods();
     //JSExecutor jsExecutor=new JSExecutor();
 

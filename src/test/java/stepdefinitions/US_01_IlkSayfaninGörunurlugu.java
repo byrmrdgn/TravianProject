@@ -2,22 +2,23 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import pages.Page;
+import pages.US_01_IlkSayfaninGörunurluguPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 import utilities.MyMethods;
+
+import java.util.Set;
 
 
 public class US_01_IlkSayfaninGörunurlugu {
 /*
                         ****************************  NESNELER     ******************
 */
-    Page page=new Page();
+    US_01_IlkSayfaninGörunurluguPage page=new US_01_IlkSayfaninGörunurluguPage();
     MyMethods myMethods=new MyMethods();
     Actions actions =new Actions(Driver.getDriver());
+    Set<String> tumPencereler = Driver.getDriver().getWindowHandles();
 
 
 /*
@@ -98,23 +99,29 @@ public class US_01_IlkSayfaninGörunurlugu {
     public void discord_dropdownuna_gider() {
         myMethods.elementeGit(page.discordDrpdwn);
     }
+
     @Given("blog linkine tiklar")
     public void blog_linkine() {
        page.blogLinki.click();
-       myMethods.windowsHandleAl(ConfigurationReader.getProperty("discord_blog_url"));
-       
+        String handles = (String) (tumPencereler.toArray())[tumPencereler.size()-1];
+        Driver.getDriver().switchTo().window(handles);
+
     }
 
     @Given("discord linkine tiklar")
     public void discord_linkine_tiklar() {
-        page.discordDrpdwn.click();
-        myMethods.windowsHandleAl(ConfigurationReader.getProperty("discord_blog_url"));
+        myMethods.elementeGit(page.discordDrpdwn);
+        page.discordLinki.click();
+        String handles = (String) (tumPencereler.toArray())[tumPencereler.size()-1];
+        Driver.getDriver().switchTo().window(handles);
     }
 
-    @Given("calender linkine tiklar ve geri döner")
-    public void calender_linkine_tiklar_ve_geri_döner() {
-    page.calenderLinki.click();
-    myMethods.windowsHandleAl(ConfigurationReader.getProperty(""));
+    @Given("calender linkine tiklar")
+    public void calender_linkine() {
+        myMethods.elementeGit(page.discordDrpdwn);
+        page.calenderLinki.click();
+        String handles = (String) (tumPencereler.toArray())[tumPencereler.size()-1];
+        Driver.getDriver().switchTo().window(handles);
     }
 
     @Given("travian logosunun görunurlugunu test eder")
@@ -140,7 +147,7 @@ public class US_01_IlkSayfaninGörunurlugu {
     @Given("haberler linkine tiklar ve geri döner")
     public void haberler_linkine_tiklar_ve_geri_döner() {
         page.haberlerLinki.click();
-        myMethods.windowsHandleAl(ConfigurationReader.getProperty("haberler_url"));
+        //myMethods.windowsHandleAl(ConfigurationReader.getProperty("haberler_url"));
     }
 
     @Given("ana sayfada buyuk yazinin görunup görunmedigine bakar")
@@ -176,19 +183,21 @@ public class US_01_IlkSayfaninGörunurlugu {
     @Given("facebook linkine tiklar ve geri döner")
     public void facebook_linkine_tiklar_ve_geri_döner() {
         page.facebookLinki.click();
-        myMethods.windowsHandleAl(ConfigurationReader.getProperty("travian_facebook_url"));
+        String handles = (String) (tumPencereler.toArray())[tumPencereler.size()-1];
+        Driver.getDriver().switchTo().window(handles);
+        //myMethods.windowsHandleAl(ConfigurationReader.getProperty("travian_facebook_url"));
     }
 
     @Given("sayfanin altindaki discord linkine tiklar")
     public void sayfanin_altindaki_discord_linkine_tiklar() {
        page.sayfaAltiDiscordLinki.click();
-       myMethods.windowsHandleAl(ConfigurationReader.getProperty("sayfanin_altindaki_discord_linki"));
+       //myMethods.windowsHandleAl(ConfigurationReader.getProperty("sayfanin_altindaki_discord_linki"));
     }
 
     @Given("sayfanin altindaki youtube linkine tiklar")
     public void sayfanin_altindaki_youtube_linkine_tiklar() {
         page.youTubeLinki.click();
-        myMethods.windowsHandleAl(ConfigurationReader.getProperty("travian_youtube_linki"));
+       // myMethods.windowsHandleAl(ConfigurationReader.getProperty("travian_youtube_linki"));
     }
 
     @Given("sayfanin altindaki destek linkine tiklar ve geri döner")

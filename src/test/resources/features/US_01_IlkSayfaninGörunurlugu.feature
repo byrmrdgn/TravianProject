@@ -23,21 +23,21 @@ Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
     And ekran göruntuleri linkine tiklar ve geri döner
     And tv reklamlari linkine tiklar ve geri döner
 
-  #@discordlinki
-  #Scenario: TC_005 Kullanici discord icindeki linkleri kontrol eder
-    #Given discord dropdownuna gider
-    #And blog linkine tiklar
-    #And discord linkine tiklar
-    #And calender linkine tiklar
+  @discordlinki
+  Scenario: TC_005 Kullanici discord icindeki linkleri kontrol eder
+    Given discord dropdownuna gider
+    And blog linkine tiklar
+    And discord linkine tiklar
+    And calender linkine tiklar
 
   @logo
   Scenario: TC_006 Kullanici logoyu görur
     Given travian logosunun görunurlugunu test eder
 
-  @dilSecenekleri
-  Scenario: TC_007 Kullanici dil seceneklerinden dil secer
-    Given dil secenekleri linkini tiklar
-    And acilan sayfadan dilleri secer
+  #@dilSecenekleri
+  #Scenario: TC_007 Kullanici dil seceneklerinden dil secer
+    #Given dil secenekleri linkini tiklar
+    #And acilan sayfadan dilleri secer
 
   #@haberlerLinki
   #Scenario: TC_008 Kullanici haberler linkini kontrol eder
@@ -67,9 +67,9 @@ Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
   Scenario: TC_014 Kullanici roma komutan resminin varligini kontrol eder
     Given ana sayfada roma komutan resminin görunup görunmedigine bakar
 
-  #@facebooklinki
-  #Scenario: TC_015 Kullanici sayfanin altindaki facebook linkini kontrol eder
-    #Given facebook linkine tiklar ve geri döner
+  @facebooklinki
+  Scenario: TC_015 Kullanici sayfanin altindaki facebook linkini kontrol eder
+    Given facebook linkine tiklar ve geri döner
 
   @sayfaAltiDiscordlinki
   Scenario: TC_016 Kullanici sayfanin altindaki discord linkini kontrol eder

@@ -7,9 +7,9 @@ import utilities.Driver;
 
 import java.util.List;
 
-public class Page {
+public class US_01_IlkSayfaninGörunurluguPage {
 
-    public Page (){
+    public US_01_IlkSayfaninGörunurluguPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
