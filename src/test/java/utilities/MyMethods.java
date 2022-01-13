@@ -8,7 +8,6 @@ import pages.US_01_IlkSayfaninGörunurluguPage;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 
 public class MyMethods {
 
@@ -26,7 +25,7 @@ public class MyMethods {
         }
     }
 
-    public void urlAssert() {
+    public void assertToMainUrl() {
         String url = Driver.getDriver().getCurrentUrl();
         Assert.assertEquals(url, ConfigurationReader.getProperty("travian_Url"));
     }
@@ -35,7 +34,7 @@ public class MyMethods {
         element.click();
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(300);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -43,20 +42,15 @@ public class MyMethods {
         Driver.getDriver().navigate().back();
     }
 
-    public void urlDogrula(String string) {
+    public void assertToUrl(String string) {
         Assert.assertEquals(string, url);
     }
+
 
     public void elementeGit(WebElement element) {
         actions.moveToElement(element).perform();
     }
-/*
-   public void windowsHandleAl() {
 
-        Set<String> tumPencereler = Driver.getDriver().getWindowHandles();
-        String handles = (String) (tumPencereler.toArray())[tumPencereler.size()-1];
-        Driver.getDriver().switchTo().window(handles);
-    }*/
 
     public void dilSec() {
 

@@ -20,17 +20,21 @@ public class US_01_IlkSayfaninGörunurlugu {
     Actions actions =new Actions(Driver.getDriver());
     Set<String> tumPencereler = Driver.getDriver().getWindowHandles();
 
-
 /*
                         ****************************  KODLAR     ******************
  */
 
+//  ************** Test Case 1 **************
+
     @Given("kullanici {string} adresine gider")
     public void kullanici_adresine_gider(String string) {
         Driver.getDriver().get(ConfigurationReader.getProperty("travian_Url"));
+        myMethods.assertToMainUrl();
         //myMethods.acceptAll();
-        myMethods.urlAssert();
+
     }
+
+//  ************** Test Case 2 **************
 
     @Given("kullanici oyun dropdownuna gider")
     public void kullanici_oyun_dropdownuna_gider() {
@@ -40,42 +44,46 @@ public class US_01_IlkSayfaninGörunurlugu {
     @Given("oyun tarzi linkine tiklar ve geri döner")
     public void oyun_tarzi_linkine_tiklar_ve_geri_döner() {
         myMethods.linkiTiklaGeriDön(page.oyunDrpdwnOyunTarziLinki);
+        myMethods.assertToUrl(ConfigurationReader.getProperty("oyun_tarzi_url"));
         myMethods.elementeGit(page.oyunDropdown);
-        myMethods.urlDogrula(ConfigurationReader.getProperty("oyun_tarzi_url"));
     }
 
     @Given("oyuncu etkilesimine tiklar ve geri döner")
     public void oyuncu_etkilesimine_tiklar_ve_geri_döner() {
         myMethods.linkiTiklaGeriDön(page.oyunDrpdwnOyuncuEtkilesimiLinki);
+        myMethods.assertToUrl(ConfigurationReader.getProperty("oyuncu_etkilesimi_url"));
         myMethods.elementeGit(page.oyunDropdown);
-        myMethods.urlDogrula(ConfigurationReader.getProperty("oyuncu_etkilesimi_url"));
     }
 
     @Given("imparatorluk kur linkine tiklar ver geri döner")
     public void imparatorluk_kur_linkine_tiklar_ver_geri_döner() {
         myMethods.linkiTiklaGeriDön(page.oyunDrpdwnİmparatorlukKurLinki);
+        myMethods.assertToUrl(ConfigurationReader.getProperty("imparatorluk_kur_url"));
         myMethods.elementeGit(page.oyunDropdown);
-        myMethods.urlDogrula(ConfigurationReader.getProperty("imparatorluk_kur_url"));
     }
 
     @Given("Carpisma linkine tiklar ve geri döner")
     public void carpisma_linkine_tiklar_ve_geri_döner() {
         myMethods.linkiTiklaGeriDön(page.oyunDrpdwnÇarpışmaLinki);
-        myMethods.urlDogrula(ConfigurationReader.getProperty("carpisma_url"));
+        myMethods.assertToUrl(ConfigurationReader.getProperty("carpisma_url"));
         myMethods.elementeGit(page.oyunDropdown);
     }
 
     @Given("Gec oyun linkine tiklar ve geri döner")
     public void gec_oyun_linkine_tiklar_ve_geri_döner() {
         myMethods.linkiTiklaGeriDön(page.oyunDrpdwnGeçOyunLinki);
-        myMethods.urlDogrula(ConfigurationReader.getProperty("gec_oyun_url"));
+        myMethods.assertToUrl(ConfigurationReader.getProperty("gec_oyun_url"));
     }
+
+//  ************** Test Case 3 **************
 
     @Given("tournament linkine tiklar ve geri döner")
     public void tournament_linkine_tiklar_ve_geri_döner() {
         myMethods.linkiTiklaGeriDön(page.tournamentLinki);
-        myMethods.urlDogrula(ConfigurationReader.getProperty("tournament_url"));
+        myMethods.assertToUrl(ConfigurationReader.getProperty("tournament_url"));
     }
+
+//  ************** Test Case 4 **************
 
     @Given("kullanici medya linkine gider")
     public void kullanici_medya_linkine_gider() {
@@ -85,15 +93,17 @@ public class US_01_IlkSayfaninGörunurlugu {
     @Given("ekran göruntuleri linkine tiklar ve geri döner")
     public void ekran_göruntuleri_linkine_tiklar_ve_geri_döner() {
         myMethods.linkiTiklaGeriDön(page.medyaDrpdwnEkranGörüntüleriLinki);
+        myMethods.assertToUrl(ConfigurationReader.getProperty("ekran_goruntuleri_url"));
         myMethods.elementeGit(page.medyaDropdown);
-        myMethods.urlDogrula(ConfigurationReader.getProperty("ekran_goruntuleri_url"));
     }
 
     @Given("tv reklamlari linkine tiklar ve geri döner")
     public void tv_reklamlari_linkine_tiklar_ve_geri_döner() {
         myMethods.linkiTiklaGeriDön(page.medyaDrpdwnTVreklamlarıLinki);
-        myMethods.urlDogrula(ConfigurationReader.getProperty("tv_reklamlari_url"));
+        myMethods.assertToUrl(ConfigurationReader.getProperty("tv_reklamlari_url"));
     }
+
+//  ************** Test Case 5 **************
 
     @Given("discord dropdownuna gider")
     public void discord_dropdownuna_gider() {
@@ -102,7 +112,7 @@ public class US_01_IlkSayfaninGörunurlugu {
 
     @Given("blog linkine tiklar")
     public void blog_linkine() {
-       page.blogLinki.click();
+        page.blogLinki.click();
         String handles = (String) (tumPencereler.toArray())[tumPencereler.size()-1];
         Driver.getDriver().switchTo().window(handles);
 
@@ -114,6 +124,7 @@ public class US_01_IlkSayfaninGörunurlugu {
         page.discordLinki.click();
         String handles = (String) (tumPencereler.toArray())[tumPencereler.size()-1];
         Driver.getDriver().switchTo().window(handles);
+
     }
 
     @Given("calender linkine tiklar")
@@ -122,7 +133,9 @@ public class US_01_IlkSayfaninGörunurlugu {
         page.calenderLinki.click();
         String handles = (String) (tumPencereler.toArray())[tumPencereler.size()-1];
         Driver.getDriver().switchTo().window(handles);
+
     }
+
 
     @Given("travian logosunun görunurlugunu test eder")
     public void travian_logosunun_görunurlugunu_test_eder() {
@@ -197,6 +210,8 @@ public class US_01_IlkSayfaninGörunurlugu {
     @Given("sayfanin altindaki youtube linkine tiklar")
     public void sayfanin_altindaki_youtube_linkine_tiklar() {
         page.youTubeLinki.click();
+        String handles = (String) (tumPencereler.toArray())[tumPencereler.size()-3];
+        Driver.getDriver().switchTo().window(handles);
        // myMethods.windowsHandleAl(ConfigurationReader.getProperty("travian_youtube_linki"));
     }
 

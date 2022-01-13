@@ -110,7 +110,7 @@ public class US_01_IlkSayfaninGörunurluguPage {
     @FindBy (xpath = "(//*[.='Discord'])[3]")
     public WebElement sayfaAltiDiscordLinki;
 
-    @FindBy (xpath = "(//a[@target='_blank'])[10]")
+    @FindBy (xpath = "(//*[.='YouTube'])")
     public WebElement youTubeLinki;
 
     @FindBy(xpath = "(//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc IIdkle'])[2]")

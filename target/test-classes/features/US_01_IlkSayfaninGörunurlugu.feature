@@ -1,10 +1,12 @@
+# sayfa komple gözden gecirilmeli.
 @US_01_sayfaGörunurlugu
 Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
-# sayfa komple gözden gecirilmeli.
+    # Assert edildi
   Background: TC_001 Travian sayfasina gidis
-      Given kullanici "travian" adresine gider
+    Given kullanici "travian" adresine gider
 
   @oyunDropdown
+    # Assert edildi
   Scenario: TC_002 Kullanici dropdown icindeki linkleri kontrol eder
     Given kullanici oyun dropdownuna gider
     And oyun tarzi linkine tiklar ve geri döner
@@ -14,10 +16,12 @@ Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
     And Gec oyun linkine tiklar ve geri döner
 
   @tournamentlinki
+    # Assert edildi
   Scenario: TC_003 Kullanici tournament linkini kontrol eder
     Given tournament linkine tiklar ve geri döner
 
   @medyaDropdown
+    # Assert edildi
   Scenario: TC_004 Kullanici medya dropdown icindeki linkleri kontrol eder
     Given kullanici medya linkine gider
     And ekran göruntuleri linkine tiklar ve geri döner
