@@ -1,6 +1,6 @@
 # sayfa komple gözden gecirilmeli.
 @US_01_sayfaGörunurlugu
-Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
+Feature: Ilk sayfa kullanicilar icin kullanisli olmali
     # Assert edildi
   Background: TC_001 Travian sayfasina gidis
     Given kullanici "travian" adresine gider
@@ -14,11 +14,13 @@ Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
     And imparatorluk kur linkine tiklar ver geri döner
     And Carpisma linkine tiklar ve geri döner
     And Gec oyun linkine tiklar ve geri döner
+    And Kullanici driveri kapatir
 
   @tournamentlinki
     # Assert edildi
   Scenario: TC_003 Kullanici tournament linkini kontrol eder
     Given tournament linkine tiklar ve geri döner
+    And Kullanici driveri kapatir
 
   @medyaDropdown
     # Assert edildi
@@ -26,6 +28,7 @@ Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
     Given kullanici medya linkine gider
     And ekran göruntuleri linkine tiklar ve geri döner
     And tv reklamlari linkine tiklar ve geri döner
+    And Kullanici driveri kapatir
 
   @discordlinki
   Scenario: TC_005 Kullanici discord icindeki linkleri kontrol eder
@@ -33,64 +36,90 @@ Feature: Kullanici gerekli bilgileri yazmadan uyelik islemi gerceklesmemeli
     And blog linkine tiklar
     And discord linkine tiklar
     And calender linkine tiklar
+    And Kullanici driveri kapatir
 
   @logo
+    # Assert edildi
   Scenario: TC_006 Kullanici logoyu görur
     Given travian logosunun görunurlugunu test eder
+    And Kullanici driveri kapatir
 
   #@dilSecenekleri
   #Scenario: TC_007 Kullanici dil seceneklerinden dil secer
     #Given dil secenekleri linkini tiklar
     #And acilan sayfadan dilleri secer
+    #And Kullanici driveri kapatir
 
   #@haberlerLinki
   #Scenario: TC_008 Kullanici haberler linkini kontrol eder
    # Given haberler linkine tiklar ve geri döner
+   #And Kullanici driveri kapatir
 
   @buyukYaziGörunurMu
+    # Assert edildi
   Scenario: TC_009 Kullanici buyuk yazinin varligini kontrol eder
     Given ana sayfada buyuk yazinin görunup görunmedigine bakar
+    And Kullanici driveri kapatir
 
   @kucukYaziGörunurMu
+    # Assert edildi
   Scenario: TC_010 Kullanici kucuk yazinin varligini kontrol eder
     Given ana sayfada kucuk yazinin görunup görunmedigine bakar
+    And Kullanici driveri kapatir
 
   @hemenOynaGörunurMu
+    # Assert edildi
   Scenario: TC_011 Kullanici hemen oyna yazisinin varligini kontrol eder
     Given ana sayfada hemen oyna yazisinin görunup görunmedigine bakar
+    And Kullanici driveri kapatir
 
   @kaleArkaPlaniResmiGörunurMu
+    # Assert edildi
   Scenario: TC_012 Kullanici kale arka plan resminin varligini kontrol eder
     Given ana sayfada kale arka plan resminin görunup görunmedigine bakar
+    And Kullanici driveri kapatir
 
   @romaOrdusuResmiGörunurMu
+    # Assert edildi
   Scenario: TC_013 Kullanici roma ordusu resminin varligini kontrol eder
     Given ana sayfada roma ordusu resminin görunup görunmedigine bakar
+    And Kullanici driveri kapatir
 
   @romaKomutaniResmiGörunurMu
+    # Assert edildi
   Scenario: TC_014 Kullanici roma komutan resminin varligini kontrol eder
     Given ana sayfada roma komutan resminin görunup görunmedigine bakar
+    And Kullanici driveri kapatir
 
   @facebooklinki
   Scenario: TC_015 Kullanici sayfanin altindaki facebook linkini kontrol eder
     Given facebook linkine tiklar ve geri döner
+    And Kullanici driveri kapatir
 
   @sayfaAltiDiscordlinki
   Scenario: TC_016 Kullanici sayfanin altindaki discord linkini kontrol eder
     Given sayfanin altindaki discord linkine tiklar
+    And Kullanici driveri kapatir
 
   @sayfaAltiYoutubelinki
   Scenario: TC_017 Kullanici sayfanin altindaki youtube linkini kontrol eder
     Given sayfanin altindaki youtube linkine tiklar
+    And Kullanici driveri kapatir
 
   @sayfaAltiDesteklinki
+    # Assert edildi
   Scenario: TC_018 Kullanici sayfanin altindaki destek linkini kontrol eder
     Given sayfanin altindaki destek linkine tiklar ve geri döner
+    And Kullanici driveri kapatir
 
   @sayfaAltiDahaFazlaOynalinki
+    # Assert edildi
   Scenario: TC_019 Kullanici sayfanin altindaki daha fazla oyna linkini kontrol eder
     Given sayfanin altindaki daha fazla oyna linkine tiklar ve geri döner
+    And Kullanici driveri kapatir
 
   @sayfaAltiOyunKurallarilinki
+    # Assert edildi
   Scenario: TC_020 Kullanici sayfanin altindaki oyun kurallari linkini kontrol eder
-    Given sayfanin altindaki oyunk kurallari linkine tiklar ve geri döner
+    Given sayfanin altindaki oyun kurallari linkine tiklar ve geri döner
+    And Kullanici driveri kapatir

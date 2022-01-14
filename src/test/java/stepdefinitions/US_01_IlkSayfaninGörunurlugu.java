@@ -75,6 +75,11 @@ public class US_01_IlkSayfaninGörunurlugu {
         myMethods.assertToUrl(ConfigurationReader.getProperty("gec_oyun_url"));
     }
 
+    @Given("Kullanici driveri kapatir")
+    public void kullanici_driveri_kapatir() {
+        Driver.closeDriver();
+    }
+
 //  ************** Test Case 3 **************
 
     @Given("tournament linkine tiklar ve geri döner")
@@ -136,6 +141,7 @@ public class US_01_IlkSayfaninGörunurlugu {
 
     }
 
+//  ************** Test Case 6 **************
 
     @Given("travian logosunun görunurlugunu test eder")
     public void travian_logosunun_görunurlugunu_test_eder() {
@@ -163,49 +169,67 @@ public class US_01_IlkSayfaninGörunurlugu {
         //myMethods.windowsHandleAl(ConfigurationReader.getProperty("haberler_url"));
     }
 
+//  ************** Test Case 9 **************
+
     @Given("ana sayfada buyuk yazinin görunup görunmedigine bakar")
     public void ana_sayfada_buyuk_yazinin_görunup_görunmedigine_bakar() {
        Assert.assertTrue(page.anaSayfadakiBuyukYazi.isDisplayed());
     }
+
+//  ************** Test Case 10 **************
 
     @Given("ana sayfada kucuk yazinin görunup görunmedigine bakar")
     public void ana_sayfada_kucuk_yazinin_görunup_görunmedigine_bakar() {
         Assert.assertTrue(page.anaSayfadakiKucukYazi.isDisplayed());
     }
 
+//  ************** Test Case 11 **************
+
     @Given("ana sayfada hemen oyna yazisinin görunup görunmedigine bakar")
     public void ana_sayfada_hemen_oyna_yazisinin_görunup_görunmedigine_bakar() {
         Assert.assertTrue(page.hemenOyna.isDisplayed());
     }
+
+//  ************** Test Case 12 **************
 
     @Given("ana sayfada kale arka plan resminin görunup görunmedigine bakar")
     public void ana_sayfada_kale_arka_plan_resminin_görunup_görunmedigine_bakar() {
         Assert.assertTrue(page.girisSayfasiKaleResmi.isDisplayed());
     }
 
+//  ************** Test Case 13 **************
+
     @Given("ana sayfada roma ordusu resminin görunup görunmedigine bakar")
     public void ana_sayfada_roma_ordusu_resminin_görunup_görunmedigine_bakar() {
         Assert.assertTrue(page.girisSayfasiOrduResmi.isDisplayed());
     }
+
+//  ************** Test Case 14 **************
 
     @Given("ana sayfada roma komutan resminin görunup görunmedigine bakar")
     public void ana_sayfada_roma_komutan_resminin_görunup_görunmedigine_bakar() {
         Assert.assertTrue(page.girisSayfasiKomutanResmi.isDisplayed());
     }
 
+//  ************** Test Case 15 **************
+
     @Given("facebook linkine tiklar ve geri döner")
     public void facebook_linkine_tiklar_ve_geri_döner() {
         page.facebookLinki.click();
         String handles = (String) (tumPencereler.toArray())[tumPencereler.size()-1];
         Driver.getDriver().switchTo().window(handles);
-        //myMethods.windowsHandleAl(ConfigurationReader.getProperty("travian_facebook_url"));
+        myMethods.assertToUrl(ConfigurationReader.getProperty("travian_facebook_url"));
     }
+
+//  ************** Test Case 16 **************
 
     @Given("sayfanin altindaki discord linkine tiklar")
     public void sayfanin_altindaki_discord_linkine_tiklar() {
        page.sayfaAltiDiscordLinki.click();
        //myMethods.windowsHandleAl(ConfigurationReader.getProperty("sayfanin_altindaki_discord_linki"));
     }
+
+//  ************** Test Case 17 **************
 
     @Given("sayfanin altindaki youtube linkine tiklar")
     public void sayfanin_altindaki_youtube_linkine_tiklar() {
@@ -215,19 +239,28 @@ public class US_01_IlkSayfaninGörunurlugu {
        // myMethods.windowsHandleAl(ConfigurationReader.getProperty("travian_youtube_linki"));
     }
 
+//  ************** Test Case 18 **************
+
     @Given("sayfanin altindaki destek linkine tiklar ve geri döner")
     public void sayfanin_altindaki_destek_linkine_tiklar_ve_geri_döner() {
         myMethods.linkiTiklaGeriDön(page.sayfaAltiDestekLinki);
+        myMethods.assertToUrl(ConfigurationReader.getProperty("destek_url"));
     }
+
+//  ************** Test Case 19 **************
 
     @Given("sayfanin altindaki daha fazla oyna linkine tiklar ve geri döner")
     public void sayfanin_altindaki_daha_fazla_oyna_linkine_tiklar_ve_geri_döner() {
         myMethods.linkiTiklaGeriDön(page.sayfaAltiDahaFazlaOynaLinki);
+        myMethods.assertToUrl(ConfigurationReader.getProperty("daha_fazla_oyna_url"));
     }
 
-    @Given("sayfanin altindaki oyunk kurallari linkine tiklar ve geri döner")
-    public void sayfanin_altindaki_oyunk_kurallari_linkine_tiklar_ve_geri_döner() {
+//  ************** Test Case 20 **************
+
+    @Given("sayfanin altindaki oyun kurallari linkine tiklar ve geri döner")
+    public void sayfanin_altindaki_oyun_kurallari_linkine_tiklar_ve_geri_döner() {
         myMethods.linkiTiklaGeriDön(page.sayfaAltiOyunKurallariLinki);
+        myMethods.assertToUrl(ConfigurationReader.getProperty("oyun_kurallari_url"));
     }
 }
 
