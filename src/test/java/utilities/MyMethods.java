@@ -8,6 +8,7 @@ import pages.US_01_IlkSayfaninGörunurluguPage;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 public class MyMethods {
 
@@ -46,11 +47,21 @@ public class MyMethods {
         Assert.assertEquals(string, url);
     }
 
+    public void getHandlesAndUrl(){
+        Set<String> allHandles=Driver.getDriver().getWindowHandles();
+        Object[] handlesArray=allHandles.toArray();
+
+        for (int i=0;i<handlesArray.length;i++){
+            Driver.getDriver().switchTo().window(handlesArray[i].toString());
+            url=Driver.getDriver().getCurrentUrl();
+            Driver.getDriver().switchTo().window(handlesArray[0].toString());
+        }
+
+    }
 
     public void elementeGit(WebElement element) {
         actions.moveToElement(element).perform();
     }
-
 
     public void dilSec() {
 
@@ -58,7 +69,11 @@ public class MyMethods {
 
             Assert.assertTrue(page.dilSecenekleri.get(i).isDisplayed());
 
+
             page.dilSecenekleri.get(i).click();
+
+            Set<String>dilLinkleri= Collections.singleton(Driver.getDriver().getCurrentUrl());
+            Object[] urlToLangues=dilLinkleri.toArray();
 
             try {
                 Thread.sleep(350);
@@ -69,6 +84,9 @@ public class MyMethods {
             if (i != 48) {
                 page.dilSecenekleriLinki.click();
             }
+
+
+
         }
     }
 

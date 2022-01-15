@@ -77,9 +77,6 @@ public class US_01_IlkSayfaninGörunurluguPage {
     @FindBy(xpath = "(//label [@class='radioButton'])[48]")
     public WebElement turkce;
 
-    @FindBy (xpath = "(//a[@target='_blank'])[2]")
-    public WebElement haberlerLinki;
-
     @FindBy(xpath = "//a[@title='Giriş']")
     public WebElement girisLinki;
 
