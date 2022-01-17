@@ -1,4 +1,3 @@
-# sayfa komple gözden gecirilmeli.
 @US_01_sayfaGörunurlugu
 Feature: Ilk sayfa kullanicilar icin kullanisli olmali
     # Assert edildi

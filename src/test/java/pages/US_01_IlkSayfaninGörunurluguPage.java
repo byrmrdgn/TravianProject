@@ -122,6 +122,11 @@ public class US_01_IlkSayfaninGörunurluguPage {
     @FindBy(xpath = "//a[@title='Oyun Kuralları']")
     public WebElement sayfaAltiOyunKurallariLinki;
 
+    //Us02
+
+    @FindBy(xpath = "//*[.='Oynamak için kaydol']")
+    public WebElement oynamakIcinKaydol;
+
     @FindBy(xpath = "//div[@class='header']")
     public WebElement oyunDunyasiniDegistir;
 
@@ -131,13 +136,13 @@ public class US_01_IlkSayfaninGörunurluguPage {
     @FindBy(id = "changeRegion")
     public WebElement farkliBölgeSec;
 
-    @FindBy(xpath = "//*[@id=\"Registration\"]//div[2]/div[1]/span")
+    @FindBy(xpath = "//*[@id='Registration']//div[2]/div[1]/span")
     public List <WebElement> sunucuYasi;
 
     @FindBy(xpath = "(//h4)[2]")
     public WebElement sunucuBölgesininAdi;
 
-    @FindBy(id = "playerName")
+    @FindBy(id = "name")
     public WebElement isimKutusu;
 
     @FindBy(xpath = "//*[.='Open Beta']")

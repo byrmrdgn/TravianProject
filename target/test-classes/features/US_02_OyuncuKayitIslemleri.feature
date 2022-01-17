@@ -1,5 +1,5 @@
 @US_02_OyuncuKayitIslemleri
-
+# BU SAYFA KOMPLE GÖZDEN GECIRILMELI
 @hemenOynaLinki
 Feature: Kullanici oyuna kayit olabilmeli
 
@@ -7,10 +7,14 @@ Feature: Kullanici oyuna kayit olabilmeli
     Given kullanici "travian" adresine gider
 
  @hemenOyna
+
+   # Sadece hemen oyna butonu test edilecek. hem ust sayfadaki hem alt sayfdaki
   Scenario: TC_021 Kullanici Hemen Oyna linkini kontrol eder
     Given hemen oyna linkine tiklar
-    And acilan pencereden oyun dunyalarina bakar
-    Then oyun dunyalarini kontrol eder
+    #And sayfada asagi inerek cikan kaydol linkine tiklar
+    And sayfanin altindaki hemen oyna linkine tiklar
+    #And acilan pencereden oyun dunyalarina bakar
+    #Then oyun dunyalarini kontrol eder
 
  @hemenOynaUluslararasi
   Scenario: TC_022 Kullanici Hemen Oyna linki icinde var olan uluslararasi bölgesinin oynandigi gun sayisini kotrol eder

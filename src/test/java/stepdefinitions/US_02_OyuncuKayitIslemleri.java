@@ -2,8 +2,11 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
+import org.openqa.selenium.interactions.Actions;
 import pages.US_01_IlkSayfaninGörunurluguPage;
 import utilities.ConfigurationReader;
+import utilities.Driver;
 import utilities.MyMethods;
 
 import java.util.ArrayList;
@@ -15,15 +18,34 @@ public class US_02_OyuncuKayitIslemleri {
 
     US_01_IlkSayfaninGörunurluguPage page=new US_01_IlkSayfaninGörunurluguPage();
     MyMethods myMethods=new MyMethods();
+    Actions actions =new Actions(Driver.getDriver());
 
     @Given("hemen oyna linkine tiklar")
     public void hemen_oyna_linkine_tiklar() {
         page.hemenOyna.click();
+        myMethods.wait(10);
+        Assert.assertTrue(page.oynamakIcinKaydol.isDisplayed());
+        Driver.getDriver().navigate().refresh();
+    }
+
+
+    @Given("sayfada asagi inerek cikan kaydol linkine tiklar")
+    public void sayfada_asagi_inerek_cikan_kaydol_linkine_tiklar() {
+
+
+    }
+
+    @Given("sayfanin altindaki hemen oyna linkine tiklar")
+    public void sayfanin_altindaki_hemen_oyna_linkine_tiklar() {
+        page.sayfaAltiHemenOyna.click();
+        myMethods.wait(2);
+        Assert.assertTrue(page.oynamakIcinKaydol.isDisplayed());
     }
 
     @Given("acilan pencereden oyun dunyalarina bakar")
     public void acilan_pencereden_oyun_dunyalarina_bakar() {
         page.oyunDunyasiniDegistir.click();
+        Assert.assertTrue(page.oyunDunyasiniDegistir.isSelected());
     }
 
     @Then("oyun dunyalarini kontrol eder")
