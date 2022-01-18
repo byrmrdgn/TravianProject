@@ -124,8 +124,11 @@ public class US_01_IlkSayfaninGörunurluguPage {
 
     //Us02
 
-    @FindBy(xpath = "//*[.='Oynamak için kaydol']")
+    @FindBy(xpath = "//h1/*[.='Oynamak için kaydol']")
     public WebElement oynamakIcinKaydol;
+
+    @FindBy(xpath = "//*[.='Kaydol']")
+    public WebElement kaydolLinki;
 
     @FindBy(xpath = "//div[@class='header']")
     public WebElement oyunDunyasiniDegistir;

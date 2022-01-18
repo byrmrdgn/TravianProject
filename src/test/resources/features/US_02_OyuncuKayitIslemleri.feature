@@ -8,11 +8,15 @@ Feature: Kullanici oyuna kayit olabilmeli
 
  @hemenOyna
 
-   # Sadece hemen oyna butonu test edilecek. hem ust sayfadaki hem alt sayfdaki
+   # Assert Edildi
   Scenario: TC_021 Kullanici Hemen Oyna linkini kontrol eder
     Given hemen oyna linkine tiklar
-    #And sayfada asagi inerek cikan kaydol linkine tiklar
+    And sayfada asagi inerek cikan kaydol linkine tiklar
     And sayfanin altindaki hemen oyna linkine tiklar
+
+
+
+
     #And acilan pencereden oyun dunyalarina bakar
     #Then oyun dunyalarini kontrol eder
 

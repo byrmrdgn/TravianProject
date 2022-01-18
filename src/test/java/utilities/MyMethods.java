@@ -1,6 +1,7 @@
 package utilities;
 
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.US_01_IlkSayfaninGörunurluguPage;
@@ -140,6 +141,13 @@ public class MyMethods {
         System.out.println(list);
         element.get(enKucuk).click();
         //System.out.println("En yeni Server "+element.get(0).getText()+" gun önce acildi.");
+    }
+
+    public void goToPageDown(){
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        wait(10);
     }
 
     public void milletSec(String string) {

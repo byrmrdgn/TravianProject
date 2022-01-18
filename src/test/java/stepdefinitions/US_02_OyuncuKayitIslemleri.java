@@ -3,6 +3,7 @@ package stepdefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.US_01_IlkSayfaninGörunurluguPage;
 import utilities.ConfigurationReader;
@@ -31,8 +32,11 @@ public class US_02_OyuncuKayitIslemleri {
 
     @Given("sayfada asagi inerek cikan kaydol linkine tiklar")
     public void sayfada_asagi_inerek_cikan_kaydol_linkine_tiklar() {
-
-
+        myMethods.goToPageDown();
+        page.kaydolLinki.click();
+        myMethods.wait(10);
+        Assert.assertTrue(page.oynamakIcinKaydol.isDisplayed());
+        Driver.getDriver().navigate().refresh();
     }
 
     @Given("sayfanin altindaki hemen oyna linkine tiklar")
