@@ -46,10 +46,12 @@ public class US_02_OyuncuKayitIslemleri {
         Assert.assertTrue(page.oynamakIcinKaydol.isDisplayed());
     }
 
-    @Given("acilan pencereden oyun dunyalarina bakar")
-    public void acilan_pencereden_oyun_dunyalarina_bakar() {
+    @Given("hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar")
+    public void hemen_oyna_linkine_tiklayarak_acilan_pencereden_oyun_dunyalarina_bakar() {
+        page.hemenOyna.click();
         page.oyunDunyasiniDegistir.click();
-        Assert.assertTrue(page.oyunDunyasiniDegistir.isSelected());
+        myMethods.wait(10);
+        Assert.assertTrue(page.bölgelereBak.isDisplayed());
     }
 
     @Then("oyun dunyalarini kontrol eder")
@@ -61,8 +63,6 @@ public class US_02_OyuncuKayitIslemleri {
     public void acilan_pencereden_uluslararasi_bölgenin_oynandigi_gun_sayilarina_bakar() {
         page.bölgeSec.get(1).click();
         myMethods.selectNewestServer(page.sunucuYasi);
-
-
     }
 
     @Then("en kucuk gun sayisi olani secer")

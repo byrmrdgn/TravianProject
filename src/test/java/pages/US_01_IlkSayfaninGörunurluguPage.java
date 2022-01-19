@@ -133,6 +133,11 @@ public class US_01_IlkSayfaninGörunurluguPage {
     @FindBy(xpath = "//div[@class='header']")
     public WebElement oyunDunyasiniDegistir;
 
+    @FindBy(xpath = "//h1/*[.='Select region']")
+    public WebElement bölgelereBak;
+
+
+
     @FindBy(xpath = "//div[@class='regionSelection']/div")
     public List<WebElement> bölgeSec;
 

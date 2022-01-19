@@ -14,11 +14,10 @@ Feature: Kullanici oyuna kayit olabilmeli
     And sayfada asagi inerek cikan kaydol linkine tiklar
     And sayfanin altindaki hemen oyna linkine tiklar
 
-
-
-
-    #And acilan pencereden oyun dunyalarina bakar
-    #Then oyun dunyalarini kontrol eder
+ @oyunDunyalari
+  Scenario: TC_021 Kullanici Hemen Oyna linkini kontrol eder
+    Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
+    Then oyun dunyalarini kontrol eder
 
  @hemenOynaUluslararasi
   Scenario: TC_022 Kullanici Hemen Oyna linki icinde var olan uluslararasi bölgesinin oynandigi gun sayisini kotrol eder
