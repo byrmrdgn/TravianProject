@@ -9,13 +9,14 @@ Feature: Kullanici oyuna kayit olabilmeli
  @hemenOyna
 
    # Assert Edildi
-  Scenario: TC_021 Kullanici Hemen Oyna linkini kontrol eder
+  Scenario: TC_020 Kullanici Hemen Oyna linkini kontrol eder
     Given hemen oyna linkine tiklar
     And sayfada asagi inerek cikan kaydol linkine tiklar
     And sayfanin altindaki hemen oyna linkine tiklar
 
  @oyunDunyalari
-  Scenario: TC_021 Kullanici Hemen Oyna linkini kontrol eder
+   # Assert Edildi
+  Scenario: TC_021 Kullanici oyun bölgelerini kontrol eder
     Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
     Then oyun dunyalarini kontrol eder
 

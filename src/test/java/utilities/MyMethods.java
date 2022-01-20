@@ -97,28 +97,19 @@ public class MyMethods {
 
             element.get(i).click();
 
-          /*switch (page.sunucuBölgesininAdi.getText()){
-               case "Uluslararası sunucu":
-                   Assert.assertEquals(page.sunucuBölgesininAdi.getText(),"Uluslararası sunucu");
-                   element1.click();
-                   break;
-               case "Arap sunucusu":
-                   Assert.assertEquals(page.sunucuBölgesininAdi.getText(),ConfigurationReader.getProperty("arap_sunucusu"));
-                   element1.click();
-                   break;
-               case "Amerikan sunucusu":
-                   Assert.assertEquals(page.sunucuBölgesininAdi.getText(),ConfigurationReader.getProperty("amerikan_sunucusu"));
-                   element1.click();
-                   break;
-               case "Asya sunucusu":
-                   Assert.assertEquals(page.sunucuBölgesininAdi.getText(),ConfigurationReader.getProperty("asya_sunucusu"));
-                   element1.click();
-                   break;
-               case "Avrupa sunucusu":
-                   Assert.assertEquals(page.sunucuBölgesininAdi.getText(),ConfigurationReader.getProperty("avrupa_sunucusu"));
-                   element1.click();
-                   break;
-           }*/
+            if(i==1){
+                Assert.assertEquals(page.sunucuBölgesininAdi.getText(),"Uluslararası sunucu");
+            }else if(i==2){
+                Assert.assertEquals(page.sunucuBölgesininAdi.getText(),ConfigurationReader.getProperty("arap_sunucusu"));
+            }else if(i==3){
+                Assert.assertEquals(page.sunucuBölgesininAdi.getText(),ConfigurationReader.getProperty("amerikan_sunucusu"));
+            }
+            else if(i==4){
+                Assert.assertEquals(page.sunucuBölgesininAdi.getText(),ConfigurationReader.getProperty("asya_sunucusu"));
+            }else if(i==5){
+                Assert.assertEquals(page.sunucuBölgesininAdi.getText(),ConfigurationReader.getProperty("avrupa_sunucusu"));
+            }
+
             element1.click();
 
         }
