@@ -16,11 +16,18 @@ import java.util.List;
 
 
 public class US_02_OyuncuKayitIslemleri {
-
+/*
+                        ****************************  NESNELER     ******************
+*/
     US_01_IlkSayfaninGörunurluguPage page=new US_01_IlkSayfaninGörunurluguPage();
     MyMethods myMethods=new MyMethods();
     Actions actions =new Actions(Driver.getDriver());
 
+/*
+                        ****************************  KODLAR     ******************
+*/
+
+//  ************** Test Case 20 **************
     @Given("hemen oyna linkine tiklar")
     public void hemen_oyna_linkine_tiklar() {
         page.hemenOyna.click();
@@ -28,7 +35,6 @@ public class US_02_OyuncuKayitIslemleri {
         Assert.assertTrue(page.oynamakIcinKaydol.isDisplayed());
         Driver.getDriver().navigate().refresh();
     }
-
 
     @Given("sayfada asagi inerek cikan kaydol linkine tiklar")
     public void sayfada_asagi_inerek_cikan_kaydol_linkine_tiklar() {
@@ -46,6 +52,8 @@ public class US_02_OyuncuKayitIslemleri {
         Assert.assertTrue(page.oynamakIcinKaydol.isDisplayed());
     }
 
+//  ************** Test Case 21 **************
+
     @Given("hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar")
     public void hemen_oyna_linkine_tiklayarak_acilan_pencereden_oyun_dunyalarina_bakar() {
         page.hemenOyna.click();
@@ -59,6 +67,8 @@ public class US_02_OyuncuKayitIslemleri {
         myMethods.sec(page.bölgeSec,page.farkliBölgeSec);
     }
 
+//  ************** Test Case 21 **************
+
     @Given("acilan pencereden uluslararasi bölgenin oynandigi gun sayilarina bakar")
     public void acilan_pencereden_uluslararasi_bölgenin_oynandigi_gun_sayilarina_bakar() {
         page.bölgeSec.get(1).click();
@@ -67,7 +77,6 @@ public class US_02_OyuncuKayitIslemleri {
 
     @Then("en kucuk gun sayisi olani secer")
     public void en_kucuk_gun_sayisi_olani_secer() {
-
 
         for (int i=0; i <page.sunucuYasi.size();i++){
             //System.out.println(page.sunucuYasi.get(i).getText());

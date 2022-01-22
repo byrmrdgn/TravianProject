@@ -7,7 +7,6 @@ Feature: Kullanici oyuna kayit olabilmeli
     Given kullanici "travian" adresine gider
 
  @hemenOyna
-
    # Assert Edildi
   Scenario: TC_020 Kullanici Hemen Oyna linkini kontrol eder
     Given hemen oyna linkine tiklar
@@ -15,42 +14,38 @@ Feature: Kullanici oyuna kayit olabilmeli
     And sayfanin altindaki hemen oyna linkine tiklar
 
  @oyunDunyalari
-  Scenario: TC_021 Kullanici Hemen Oyna linkini kontrol eder
+   # Assert Edildi
+  Scenario: TC_021 Kullanici oyun bölgelerini kontrol eder
     Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
     Then oyun dunyalarini kontrol eder
 
  @hemenOynaUluslararasi
   Scenario: TC_022 Kullanici Hemen Oyna linki icinde var olan uluslararasi bölgesinin oynandigi gun sayisini kotrol eder
-    Given hemen oyna linkine tiklar
-    And acilan pencereden oyun dunyalarina bakar
+    Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
     And acilan pencereden uluslararasi bölgenin oynandigi gun sayilarina bakar
     Then en kucuk gun sayisi olani secer
 
  @hemenOynaArap
   Scenario: TC_023 Kullanici Hemen Oyna linki icinde var arap bölgesinin oynandigi gun sayisini kotrol eder
-    Given hemen oyna linkine tiklar
-    And acilan pencereden oyun dunyalarina bakar
+    Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
     And acilan pencereden arap bölgesinin oynandigi gun sayilarina bakar
     Then en kucuk gun sayisi olani secer
 
  @hemenOynaAmerika
-  Scenario: TC_024 Kullanici Hemen Oyna linki icinde var olan amerika bölgesinin oynandigi gun sayisini kotrol eder
-    Given hemen oyna linkine tiklar
-    And acilan pencereden oyun dunyalarina bakar
+ Scenario: TC_024 Kullanici Hemen Oyna linki icinde var olan amerika bölgesinin oynandigi gun sayisini kotrol eder
+    Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
     And acilan pencereden amerika bölgesinin oynandigi gun sayilarina bakar
     Then en kucuk gun sayisi olani secer
 
  @hemenOynaAsya
   Scenario: TC_025 Kullanici Hemen Oyna linki icinde var olan asya bölgesinin oynandigi gun sayisini kotrol eder
-    Given hemen oyna linkine tiklar
-    And acilan pencereden oyun dunyalarina bakar
+    Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
     And acilan pencereden asya bölgesinin oynandigi gun sayilarina bakar
     Then en kucuk gun sayisi olani secer
 
  @hemenOynaAvrupa
   Scenario: TC_026 Kullanici Hemen Oyna linki icinde var olan avrupa bölgesinin oynandigi gun sayisini kotrol eder
-    Given hemen oyna linkine tiklar
-    And acilan pencereden oyun dunyalarina bakar
+    Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
     And acilan pencereden avrupa bölgesinin oynandigi gun sayilarina bakar
     Then en kucuk gun sayisi olani secer
 
