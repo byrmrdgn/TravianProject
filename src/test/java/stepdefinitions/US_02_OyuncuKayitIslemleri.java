@@ -67,43 +67,42 @@ public class US_02_OyuncuKayitIslemleri {
         myMethods.sec(page.bölgeSec,page.farkliBölgeSec);
     }
 
-//  ************** Test Case 21 **************
+//  ************** Test Case 22 **************
 
-    @Given("acilan pencereden uluslararasi bölgenin oynandigi gun sayilarina bakar")
-    public void acilan_pencereden_uluslararasi_bölgenin_oynandigi_gun_sayilarina_bakar() {
+    @Given("acilan pencereden uluslararasi bölgenin oynandigi gun sayilarina bakararak en yeni olani secer")
+    public void acilan_pencereden_uluslararasi_bölgenin_oynandigi_gun_sayilarina_bakararak_en_yeni_olani_secer() {
         page.bölgeSec.get(1).click();
         myMethods.selectNewestServer(page.sunucuYasi);
     }
 
-    @Then("en kucuk gun sayisi olani secer")
-    public void en_kucuk_gun_sayisi_olani_secer() {
+//  ************** Test Case 23 **************
 
-        for (int i=0; i <page.sunucuYasi.size();i++){
-            //System.out.println(page.sunucuYasi.get(i).getText());
-        }
-
-  }
-
-    @Given("acilan pencereden arap bölgesinin oynandigi gun sayilarina bakar")
-    public void acilan_pencereden_arap_bölgesinin_oynandigi_gun_sayilarina_bakar() {
+    @Given("acilan pencereden arap bölgesinin oynandigi gun sayilarina bakararak en yeni olani secer")
+    public void acilan_pencereden_arap_bölgesinin_oynandigi_gun_sayilarina_bakararak_en_yeni_olani_secer() {
         page.bölgeSec.get(2).click();
         myMethods.selectNewestServer(page.sunucuYasi);
     }
 
-    @Given("acilan pencereden amerika bölgesinin oynandigi gun sayilarina bakar")
-    public void acilan_pencereden_amerika_bölgesinin_oynandigi_gun_sayilarina_bakar() {
+//  ************** Test Case 24 **************
+
+    @Given("acilan pencereden amerika bölgesinin oynandigi gun sayilarina bakararak en yeni olani secer")
+    public void acilan_pencereden_amerika_bölgesinin_oynandigi_gun_sayilarina_bakararak_en_yeni_olani_secer() {
         page.bölgeSec.get(3).click();
         myMethods.selectNewestServer(page.sunucuYasi);
     }
 
-    @Given("acilan pencereden asya bölgesinin oynandigi gun sayilarina bakar")
-    public void acilan_pencereden_asya_bölgesinin_oynandigi_gun_sayilarina_bakar() {
+//  ************** Test Case 25 **************
+
+    @Given("acilan pencereden asya bölgesinin oynandigi gun sayilarina bakararak en yeni olani secer")
+    public void acilan_pencereden_asya_bölgesinin_oynandigi_gun_sayilarina_bakararak_en_yeni_olani_secer() {
         page.bölgeSec.get(4).click();
         myMethods.selectNewestServer(page.sunucuYasi);
     }
 
-    @Given("acilan pencereden avrupa bölgesinin oynandigi gun sayilarina bakar")
-    public void acilan_pencereden_avrupa_bölgesinin_oynandigi_gun_sayilarina_bakar() {
+//  ************** Test Case 26 **************
+
+    @Given("acilan pencereden avrupa bölgesinin oynandigi gun sayilarina bakararak en yeni olani secer")
+    public void acilan_pencereden_avrupa_bölgesinin_oynandigi_gun_sayilarina_bakararak_en_yeni_olani_secer() {
         page.bölgeSec.get(5).click();
         myMethods.selectNewestServer(page.sunucuYasi);
 

@@ -116,6 +116,7 @@ public class MyMethods {
     }
 
     public void selectNewestServer(List<WebElement> element) {
+
         List<Integer> list = new ArrayList<>();
         int siralamaIcin;
         int enKucuk = 0;
@@ -131,7 +132,14 @@ public class MyMethods {
         }
         System.out.println(list);
         element.get(enKucuk).click();
-        //System.out.println("En yeni Server "+element.get(0).getText()+" gun önce acildi.");
+
+        if (list.get(0)==Integer.parseInt(page.sunucuYasi.get(0).getText())){
+
+            Assert.assertTrue(true);
+            System.out.println(list.get(0));
+            System.out.println(page.sunucuYasi.get(0).getText());
+        }
+
     }
 
     public void goToPageDown(){

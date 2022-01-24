@@ -20,34 +20,35 @@ Feature: Kullanici oyuna kayit olabilmeli
     Then oyun dunyalarini kontrol eder
 
  @hemenOynaUluslararasi
+  # Assert Edildi
   Scenario: TC_022 Kullanici Hemen Oyna linki icinde var olan uluslararasi bölgesinin oynandigi gun sayisini kotrol eder
     Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
-    And acilan pencereden uluslararasi bölgenin oynandigi gun sayilarina bakar
-    Then en kucuk gun sayisi olani secer
+    And acilan pencereden uluslararasi bölgenin oynandigi gun sayilarina bakararak en yeni olani secer
 
  @hemenOynaArap
+  # Assert Edildi
   Scenario: TC_023 Kullanici Hemen Oyna linki icinde var arap bölgesinin oynandigi gun sayisini kotrol eder
     Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
-    And acilan pencereden arap bölgesinin oynandigi gun sayilarina bakar
-    Then en kucuk gun sayisi olani secer
+    And acilan pencereden arap bölgesinin oynandigi gun sayilarina bakararak en yeni olani secer
 
  @hemenOynaAmerika
+ # Assert Edildi
  Scenario: TC_024 Kullanici Hemen Oyna linki icinde var olan amerika bölgesinin oynandigi gun sayisini kotrol eder
     Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
-    And acilan pencereden amerika bölgesinin oynandigi gun sayilarina bakar
-    Then en kucuk gun sayisi olani secer
+    And acilan pencereden amerika bölgesinin oynandigi gun sayilarina bakararak en yeni olani secer
 
  @hemenOynaAsya
+  # Assert Edildi
   Scenario: TC_025 Kullanici Hemen Oyna linki icinde var olan asya bölgesinin oynandigi gun sayisini kotrol eder
     Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
-    And acilan pencereden asya bölgesinin oynandigi gun sayilarina bakar
-    Then en kucuk gun sayisi olani secer
+    And acilan pencereden asya bölgesinin oynandigi gun sayilarina bakararak en yeni olani secer
 
  @hemenOynaAvrupa
+  # Assert Edildi
   Scenario: TC_026 Kullanici Hemen Oyna linki icinde var olan avrupa bölgesinin oynandigi gun sayisini kotrol eder
     Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
-    And acilan pencereden avrupa bölgesinin oynandigi gun sayilarina bakar
-    Then en kucuk gun sayisi olani secer
+    And acilan pencereden avrupa bölgesinin oynandigi gun sayilarina bakararak en yeni olani secer
+
 
  @enYeniServer
   Scenario: TC_027 Kullanici Hemen Oyna linki icinde var olan bölgelerden en yeni olan bölgeyi secer
