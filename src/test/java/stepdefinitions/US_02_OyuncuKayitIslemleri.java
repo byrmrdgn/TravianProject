@@ -105,18 +105,14 @@ public class US_02_OyuncuKayitIslemleri {
     public void acilan_pencereden_avrupa_bölgesinin_oynandigi_gun_sayilarina_bakararak_en_yeni_olani_secer() {
         page.bölgeSec.get(5).click();
         myMethods.selectNewestServer(page.sunucuYasi);
-
-        }
-
-    @Given("oyun dunyasini degistir linkine tiklar")
-    public void oyun_dunyasini_degistir_linkine_tiklar() {
-      page.oyunDunyasiniDegistir.click();
     }
+
+//  ************** Test Case 27 **************
 
     @Then("acilan dunyalardan en yeni server'i secer")
     public void acilan_dunyalardan_en_yeni_server_i_secer() {
 
-        List<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<>(); // sunucu yaslarini icine acmak icin bir list olusturduk
 
         for (int i=1;i<page.bölgeSec.size();i++) {
             page.bölgeSec.get(i).click();
@@ -131,14 +127,17 @@ public class US_02_OyuncuKayitIslemleri {
                 siralamaIcin = Integer.parseInt(page.sunucuYasi.get(j).getText());
                 list.add(siralamaIcin);
                 Collections.sort(list);
+                //System.out.println(list);
             }
+
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             page.farkliBölgeSec.click();
-        }
+        } // for icinde tum oyun dunyalarini gezerek oyun
+                                                       // yaslarini olusturdugumuz list icine attik ve onlari osrt ettik.
 
         try{
             for (int i=1;i<page.bölgeSec.size();i++) {
@@ -146,12 +145,20 @@ public class US_02_OyuncuKayitIslemleri {
                 for (int j = 1; j < page.sunucuYasi.size(); j++) {
                     if (list.get(0)==Integer.parseInt(page.sunucuYasi.get(j).getText())){
                         page.sunucuYasi.get(j).click();
-                        break;
+                        Assert.assertTrue(list.get(0)==Integer.parseInt(page.sunucuYasi.get(0).getText()));
+                        //break;
                     }
                 }
                 page.farkliBölgeSec.click();
+
             }
-        }catch (Exception e){}
+        }catch (Exception e){} // bir try catch icinde list'in ilk elemani olan server'i aradik.
+                                      // Bulunca o server'i sectik ve sonra da assert ettik
+/*
+        System.out.println(list.get(0));
+        System.out.println(page.sunucuYasi.get(0).getText());
+
+ */
     }
 
     @Then("ePosta kutusuna e posta adresini girer")

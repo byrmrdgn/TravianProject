@@ -52,9 +52,8 @@ Feature: Kullanici oyuna kayit olabilmeli
 
  @enYeniServer
   Scenario: TC_027 Kullanici Hemen Oyna linki icinde var olan bölgelerden en yeni olan bölgeyi secer
-  Given hemen oyna linkine tiklar
-  And oyun dunyasini degistir linkine tiklar
-  Then acilan dunyalardan en yeni server'i secer
+    Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
+    Then acilan dunyalardan en yeni server'i secer
 
  @isimsizKayit
   Scenario: TC_028 Kullanici sisteme kullanici adi girmeden kayit olmaya calisir
