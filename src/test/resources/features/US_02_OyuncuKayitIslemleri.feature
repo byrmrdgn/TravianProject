@@ -56,9 +56,9 @@ Feature: Kullanici oyuna kayit olabilmeli
     Then acilan dunyalardan en yeni server'i secer
 
  @isimsizKayit
+  # Assert Edildi
   Scenario: TC_028 Kullanici sisteme kullanici adi girmeden kayit olmaya calisir
-    Given hemen oyna linkine tiklar
-    And oyun dunyasini degistir linkine tiklar
+    Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
     Then acilan dunyalardan en yeni server'i secer
     Then ePosta kutusuna e posta adresini girer
     Then hemen Kaydol butonuna tiklar

@@ -161,14 +161,21 @@ public class US_02_OyuncuKayitIslemleri {
  */
     }
 
+//  ************** Test Case 28 **************
+
     @Then("ePosta kutusuna e posta adresini girer")
     public void e_posta_kutusuna_e_posta_adresini_girer() {
         page.emailKutusu.sendKeys(ConfigurationReader.getProperty("gecerliKullanici_email"));
     }
+
     @Then("hemen Kaydol butonuna tiklar")
     public void hemen_kaydol_butonuna_tiklar() {
         page.hemenKaydolButonu.click();
+        Assert.assertTrue(page.oynamakIcinKaydol.isDisplayed());
     }
+
+//  ************** Test Case 29 **************
+
     @Then("isim kutusuna ismini girer")
     public void isim_kutusuna_ismini_girer() {
         page.isimKutusu.sendKeys(ConfigurationReader.getProperty("kullanici_ismi"));

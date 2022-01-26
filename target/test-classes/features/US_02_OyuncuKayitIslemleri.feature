@@ -49,16 +49,15 @@ Feature: Kullanici oyuna kayit olabilmeli
     Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
     And acilan pencereden avrupa bölgesinin oynandigi gun sayilarina bakararak en yeni olani secer
 
-
  @enYeniServer
+  # Assert Edildi
   Scenario: TC_027 Kullanici Hemen Oyna linki icinde var olan bölgelerden en yeni olan bölgeyi secer
     Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
     Then acilan dunyalardan en yeni server'i secer
 
  @isimsizKayit
   Scenario: TC_028 Kullanici sisteme kullanici adi girmeden kayit olmaya calisir
-    Given hemen oyna linkine tiklar
-    And oyun dunyasini degistir linkine tiklar
+    Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
     Then acilan dunyalardan en yeni server'i secer
     Then ePosta kutusuna e posta adresini girer
     Then hemen Kaydol butonuna tiklar
