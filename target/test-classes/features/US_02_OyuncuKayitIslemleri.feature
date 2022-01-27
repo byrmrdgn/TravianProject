@@ -56,6 +56,7 @@ Feature: Kullanici oyuna kayit olabilmeli
     Then acilan dunyalardan en yeni server'i secer
 
  @isimsizKayit
+  # Assert Edildi
   Scenario: TC_028 Kullanici sisteme kullanici adi girmeden kayit olmaya calisir
     Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
     Then acilan dunyalardan en yeni server'i secer
@@ -63,9 +64,9 @@ Feature: Kullanici oyuna kayit olabilmeli
     Then hemen Kaydol butonuna tiklar
 
  @EmailsizKayit
+  #Assert Edildi
   Scenario: TC_029 Kullanici sisteme eposta adresini girmeden kayit olmaya calisir
-    Given hemen oyna linkine tiklar
-    And oyun dunyasini degistir linkine tiklar
+    Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
     Then acilan dunyalardan en yeni server'i secer
     Then isim kutusuna ismini girer
     Then hemen Kaydol butonuna tiklar
