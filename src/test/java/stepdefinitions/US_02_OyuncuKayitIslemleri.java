@@ -203,7 +203,14 @@ public class US_02_OyuncuKayitIslemleri {
     public void genel_sartlari_kabul_eder() {
         page.genelSartlarKabul.click();
     }
+
+
+    @Then("hemen Kaydol butonuna tiklayarak kayit islemini gerceklestirir")
+    public void hemen_kaydol_butonuna_tiklayarak_kayit_islemini_gerceklestirir() {
+        page.hemenKaydolButonu.click();
+        Assert.assertTrue(page.hesabiEtkinlestir.isDisplayed());
+    }
+
+
+
 }
-
-
-

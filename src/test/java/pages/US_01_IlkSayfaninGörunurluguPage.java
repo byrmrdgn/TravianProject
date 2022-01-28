@@ -166,6 +166,11 @@ public class US_01_IlkSayfaninGörunurluguPage {
     @FindBy(className = "checkmark")
     public WebElement genelSartlarKabul;
 
+    @FindBy(xpath = "//h1/*[.='Hesabı etkinleştir']")
+    public WebElement hesabiEtkinlestir;
+
+
+
     @FindBy(id = "usernameOrEmail")
     public WebElement kullaniciAdiKutusu;
 

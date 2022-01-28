@@ -72,9 +72,9 @@ Feature: Kullanici oyuna kayit olabilmeli
     Then hemen Kaydol butonuna tiklar
 
  @GecersizEmailIleKayit
+ #Assert Edildi
   Scenario: TC_030 Kullanici sisteme gecersiz eposta ile kayit olmaya calisir
-    Given hemen oyna linkine tiklar
-    And oyun dunyasini degistir linkine tiklar
+    Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
     Then acilan dunyalardan en yeni server'i secer
     Then isim kutusuna ismini girer
     Then email kutusuna gecersiz email girer
@@ -82,20 +82,18 @@ Feature: Kullanici oyuna kayit olabilmeli
 
  @genelSartlarKabulEdilmedenGiris
   Scenario: TC_031 Kullanici sisteme genel sartlar ve kosullari kabul etmeden kayit olmaya calisir
-    Given hemen oyna linkine tiklar
-    And oyun dunyasini degistir linkine tiklar
+    Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
     Then acilan dunyalardan en yeni server'i secer
     Then isim kutusuna ismini girer
     Then email kutusuna email girer
     Then hemen Kaydol butonuna tiklar
 
- #@gecerliKayit
-  #Scenario: TC_032 Kullanici sisteme gecerli veriler ile kayit olmaya calisir
-    #Given hemen oyna linkine tiklar
-    #And oyun dunyasini degistir linkine tiklar
-    #Then acilan dunyalardan en yeni server'i secer
-    #Then isim kutusuna ismini girer
-    #Then email kutusuna email girer
-    #Then genel sartlari kabul eder
-    #Then hemen Kaydol butonuna tiklar
+ @gecerliKayit
+  Scenario: TC_032 Kullanici sisteme gecerli veriler ile kayit olmaya calisir
+   Given hemen oyna linkine tiklayarak acilan pencereden oyun dunyalarina bakar
+    Then acilan dunyalardan en yeni server'i secer
+    Then isim kutusuna ismini girer
+    Then email kutusuna email girer
+    Then genel sartlari kabul eder
+    Then hemen Kaydol butonuna tiklayarak kayit islemini gerceklestirir
 
