@@ -2,6 +2,8 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
+import pages.OyunSayfasiAraYuzu;
 import pages.US_01_IlkSayfaninGörunurluguPage;
 import utilities.ConfigurationReader;
 import utilities.MyMethods;
@@ -9,6 +11,7 @@ import utilities.MyMethods;
 public class US_03_GirisYap {
 
     US_01_IlkSayfaninGörunurluguPage page=new US_01_IlkSayfaninGörunurluguPage();
+    OyunSayfasiAraYuzu oyunSayfasiAraYuzuPage=new OyunSayfasiAraYuzu();
     MyMethods myMethods=new MyMethods();
     //JSExecutor jsExecutor=new JSExecutor();
 
@@ -21,7 +24,7 @@ public class US_03_GirisYap {
     public void oynadigi_serveri_secer() {
         page.farkliBölgeSec.click();
         page.bölgeSec.get(1).click();
-        page.betaServer.click();
+        page.oynanServer.click();
     }
     @Given("sifre kutusuna sifesini girer")
     public void sifre_kutusuna_sifesini_girer() {
@@ -35,6 +38,7 @@ public class US_03_GirisYap {
     @Then("giris yap butonuna tiklar")
     public void giris_yap_butonuna_tiklar() {
         page.girisYapButonu.click();
+        Assert.assertTrue(oyunSayfasiAraYuzuPage.haritaLinki.isDisplayed());
     }
 
 

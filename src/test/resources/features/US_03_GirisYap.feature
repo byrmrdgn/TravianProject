@@ -5,6 +5,7 @@ Feature: Kullanici Giris Yap linkine tikladigi zaman oyuna giris yapabilmeli
     Given kullanici "travian" adresine gider
 
 @girisYap
+  #assertEdildi
   Scenario: TC_0xx Kullanici giris yap linkini kontrol eder
     Given giris yap linkkine tiklar
     And oynadigi serveri secer

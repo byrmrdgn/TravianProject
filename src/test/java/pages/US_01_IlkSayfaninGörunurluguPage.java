@@ -151,8 +151,8 @@ public class US_01_IlkSayfaninGörunurluguPage {
     @FindBy(id = "name")
     public WebElement isimKutusu;
 
-    @FindBy(xpath = "//*[.='Open Beta']")
-    public WebElement betaServer;
+    @FindBy(xpath = "//*[.='INTERNATIONAL 31']")
+    public WebElement oynanServer;
 
     @FindBy(id = "password")
     public WebElement passwordKutusu;
