@@ -1,5 +1,5 @@
 Feature: Hammadde KaynaklariEski
-
+# bu sayfa guncellenecek
   Background: TC_001 Travian sayfasina gidis
   Given kullanici "travian" adresine gider
   And giris yap linkkine tiklar
