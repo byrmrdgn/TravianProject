@@ -12,6 +12,7 @@ Background: TC_001 Travian sayfasina gidis
     Then kullanici cerez uyarisini kabul eder
 
 @KahramaniDuzenle
+  # bu method calisiyor assert edilecek
   Scenario: Kullanici Kahramani Duzenler
     Given kullanici kahramani secer
     And kahrmani duzenleyi secer

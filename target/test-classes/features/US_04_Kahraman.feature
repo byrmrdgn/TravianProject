@@ -1,4 +1,5 @@
 @Kahraman
+  # KOMPLE GÖZDEN GECIRILECEK
 Feature: Kahraman
 
 Background: TC_001 Travian sayfasina gidis
