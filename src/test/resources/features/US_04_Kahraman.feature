@@ -37,6 +37,7 @@ Background: TC_001 Travian sayfasina gidis
     And kahramanin fiziksel degisikliklerini kaydeder
 
 @MacerayaGit
+  # bu method calisiyor assert edilecek
   Scenario: Kullanici kahramani maceraya gönderir
     Given kullanici kahramani secer
     And saglik seviyesini alir
