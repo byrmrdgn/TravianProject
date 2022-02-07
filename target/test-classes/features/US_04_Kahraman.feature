@@ -12,6 +12,7 @@ Background: TC_001 Travian sayfasina gidis
     Then kullanici cerez uyarisini kabul eder
 
 @KahramaniDuzenle
+  # bu method calisiyor assert edilecek
   Scenario: Kullanici Kahramani Duzenler
     Given kullanici kahramani secer
     And kahrmani duzenleyi secer
@@ -36,6 +37,7 @@ Background: TC_001 Travian sayfasina gidis
     And kahramanin fiziksel degisikliklerini kaydeder
 
 @MacerayaGit
+  # bu method calisiyor assert edilecek
   Scenario: Kullanici kahramani maceraya gönderir
     Given kullanici kahramani secer
     And saglik seviyesini alir
