@@ -80,7 +80,7 @@ Background: TC_001 Travian sayfasina gidis
   And itemi onaylar
 
 @sifaMerhemineTeklifYap
-  #bu code'a calisilacak,
+  #bu code'a calisilacak, tum senaryolara bakilmasi lazim
   Scenario: Kullanici acik arttirmaya katilir
     Given kullanici kahramani secer
     And acik arttirma linkine tiklar
