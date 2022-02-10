@@ -1,4 +1,6 @@
 @Bildirimler
+
+  # 2 TANE CALISMAYAN SENARYO VAR VE ASSERTLERI YAPILACAK.
   Feature: Kullanici Bildirimler sayfasinda islemler yapar
 
     Background: TC_001 Travian sayfasina gidis
